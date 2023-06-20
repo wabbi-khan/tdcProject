@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* ? Login page css */
@@ -265,16 +265,10 @@ form {
 .regBg {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(13, 66, 108, 1),
-      rgba(0, 148, 216, 0.73)
-    ),
-    url("../img/regbg.jpg");
-  background-position: 10% 100%;
+  background-image: url("../img/regbg1.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: contain;
 }
 
 .formTop #heading {
@@ -285,7 +279,7 @@ form {
   font-family: "Poppins", sans-serif;
 }
 .formTop .patient {
-  width: 90px;
+  width: 80px;
 }
 
 #msform {

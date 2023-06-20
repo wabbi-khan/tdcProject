@@ -80,7 +80,7 @@
         <div
           class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
         >
-          <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+          <div class="card px-0 pt-4 pb-0 mt-5 mb-3">
             <div
               class="formTop d-flex justify-content-around align-items-center"
             >
@@ -92,7 +92,7 @@
                 <p>Fill all form field to go to next step</p>
               </div>
               <div>
-                <img src="./img/patien.png" class="patient" alt="patien" />
+                <img src="./img/patient.png" class="patient" alt="patien" />
               </div>
             </div>
             <form id="msform" action="">
@@ -102,7 +102,7 @@
                   <strong>Account</strong>
                 </li>
                 <li id="personal"><strong>Personal</strong></li>
-                <li id="payment"><strong>Cotnact</strong></li>
+                <li id="payment"><strong>Contact</strong></li>
                 <li id="confirm"><strong>Finish</strong></li>
               </ul>
               <div class="progress">
@@ -130,10 +130,10 @@
                       <label class="fieldlabels">Email: *</label>
                       <input
                         type="email"
-                        required
+                        id="email"
                         name="email"
                         placeholder="Email Id"
-                        required
+                        class="required"
                       />
                     </div>
                     <div class="col-md-6">
@@ -141,6 +141,7 @@
                       <input
                         required
                         type="text"
+                        id="uname"
                         name="uname"
                         required
                         placeholder="UserName"
@@ -151,6 +152,7 @@
                       <input
                         type="password"
                         name="pwd"
+                        id="pwd"
                         placeholder="Password"
                         required
                       />
@@ -160,19 +162,19 @@
                       <input
                         type="password"
                         name="cpwd"
+                        id="cpwd"
                         placeholder="Confirm Password"
                         required
                       />
                     </div>
                   </div>
                 </div>
-                <button class="next action-button">Next</button>
-                <!-- <input
+                <input
                   type="button"
                   name="next"
                   class="next action-button"
                   value="Next"
-                /> -->
+                />
               </fieldset>
               <fieldset>
                 <div class="form-card">
@@ -190,6 +192,7 @@
                       <input
                         type="text"
                         name="fname"
+                        id="fname"
                         required
                         placeholder="First Name"
                       />
@@ -198,6 +201,7 @@
                       <label class="fieldlabels">Last Name: *</label>
                       <input
                         type="text"
+                        id="lname"
                         name="lname"
                         required
                         placeholder="Last Name"
@@ -209,6 +213,7 @@
                       <select
                         class="form-select"
                         aria-label="Default select example"
+                        id="gender"
                       >
                         <option selected disabled>Select Gender</option>
                         <option value="1">Male</option>
@@ -219,7 +224,8 @@
                       <label class="fieldlabels">Date of birth: *</label>
                       <input
                         type="date"
-                        name="phno_2"
+                        id="date"
+                        name="date"
                         required
                         placeholder="Alternate Contact No."
                       />
@@ -254,7 +260,8 @@
                       <label class="fieldlabels">Phone no: *</label>
                       <input
                         type="text"
-                        name="fname"
+                        id="phoneno"
+                        name="phoneno"
                         required
                         placeholder="(222) 222-2222"
                       />
@@ -263,7 +270,8 @@
                       <label class="fieldlabels">Address: *</label>
                       <input
                         type="text"
-                        name="lname"
+                        id="address"
+                        name="address"
                         required
                         placeholder="write address here"
                       />
@@ -272,7 +280,8 @@
                       <label class="fieldlabels">City: *</label>
                       <input
                         type="text"
-                        name="phno"
+                        id="city"
+                        name="city"
                         required
                         placeholder="City name."
                       />
@@ -283,6 +292,7 @@
                       <select
                         class="form-select"
                         aria-label="Default select example"
+                        id="state"
                       >
                         <option selected disabled>Select State</option>
                         <option value="1">state 1</option>
@@ -293,9 +303,10 @@
                       <label class="fieldlabels">ZipCode: *</label>
                       <input
                         type="text"
-                        name="phno_2"
+                        id="zipcode"
+                        name="zipcode"
                         required
-                        placeholder="Alternate Contact No."
+                        placeholder="001122"
                       />
                     </div>
                   </div>
