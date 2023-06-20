@@ -262,44 +262,275 @@ form {
 
 /* ? Register pgae css */
 
-.page-content {
+.regBg {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   background-image: linear-gradient(
       to bottom,
       rgba(13, 66, 108, 1),
       rgba(0, 148, 216, 0.73)
     ),
     url("../img/regbg.jpg");
-  background-position: center;
+  background-position: 10% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
+  object-fit: contain;
 }
-.form-v10-content {
-  background: #fff;
-  width: 700px;
-  height: 600px;
-  padding: 20px 10px;
-  margin-top: 50px;
+
+.formTop #heading {
+  text-transform: capitalize;
+  font-size: 30px;
+  color: #673ab7;
+  font-weight: 500;
   font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  -ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
-.heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.formTop .patient {
+  width: 90px;
+}
+
+#msform {
   text-align: center;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-card {
+  text-align: left;
+}
+
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+#msform input,
+#msform textarea,
+#msform select {
+  padding: 8px 15px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+  background-color: #eceff1;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #673ab7;
+  outline-width: 0;
+}
+
+#msform .action-button {
+  width: 100px;
+  background: #0d426c;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 0px 10px 5px;
+  float: right;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  background-color: #311b92;
+}
+
+#msform .action-button-previous {
+  width: 100px;
+  background: #616161;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px 10px 0px;
+  float: right;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  background-color: #000000;
+}
+
+.card {
+  z-index: 0;
+  border: none;
+  position: relative;
+}
+
+.fs-title {
+  font-size: 25px;
+  color: #0d426c;
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.purple-text {
+  color: #673ab7;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.steps {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-align: right;
+}
+
+.fieldlabels {
+  color: gray;
+  text-align: left;
+}
+
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: lightgrey;
+}
+
+#progressbar .active {
+  color: #0d426c;
+}
+
+#progressbar li {
+  list-style-type: none;
+  font-size: 15px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+
+#progressbar #account:before {
+  font-family: FontAwesome;
+  content: "\f13e";
+}
+
+#progressbar #personal:before {
+  font-family: FontAwesome;
+  content: "\f007";
+}
+
+#progressbar #payment:before {
+  font-family: FontAwesome;
+  content: "\f095";
+}
+
+#progressbar #confirm:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+
+#progressbar li:before {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  background: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+}
+
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #0d426c;
+}
+
+.progress {
+  height: 20px;
+}
+
+.progress-bar {
+  background-color: #0d426c !important;
+}
+
+.fit-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+  .regBg {
+    height: 100%;
+  }
+  .formTop #heading {
+    font-size: 22px;
+  }
+  .formTop p {
+    font-size: 15px;
+  }
+  .formTop img {
+    display: none;
+  }
+  .fs-title {
+    font-size: 20px;
+  }
+  #progressbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+  #progressbar li:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  #progressbar #account:before,
+  #progressbar #personal:before,
+  #progressbar #payment:before,
+  #progressbar #confirm:before {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #progressbar li {
+    font-size: 10px;
+  }
 }

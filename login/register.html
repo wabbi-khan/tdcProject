@@ -5,10 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <!-- ? Bootstrap cdn -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
-      rel="stylesheet"
-    /> -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,7 +18,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -32,7 +28,19 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Register</title>
   </head>
   <body>
@@ -66,12 +74,281 @@
         </div>
       </div>
     </nav>
-    <div class="page-content">
-      <div class="form-v10-content">
-        <div class="heading">
-          <h3>Patient Registration</h3>
+
+    <div class="container-fluid regBg">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div
+          class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+        >
+          <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+            <div
+              class="formTop d-flex justify-content-around align-items-center"
+            >
+              <div>
+                <img src="./img/logo1.png" alt="logo" class="w-75" />
+              </div>
+              <div>
+                <h2 id="heading">Patient Registration</h2>
+                <p>Fill all form field to go to next step</p>
+              </div>
+              <div>
+                <img src="./img/patien.png" class="patient" alt="patien" />
+              </div>
+            </div>
+            <form id="msform" action="">
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active" id="account">
+                  <strong>Account</strong>
+                </li>
+                <li id="personal"><strong>Personal</strong></li>
+                <li id="payment"><strong>Cotnact</strong></li>
+                <li id="confirm"><strong>Finish</strong></li>
+              </ul>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <br />
+              <!-- fieldsets -->
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Account Information:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 1 - 4</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Email: *</label>
+                      <input
+                        type="email"
+                        required
+                        name="email"
+                        placeholder="Email Id"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Username: *</label>
+                      <input
+                        required
+                        type="text"
+                        name="uname"
+                        required
+                        placeholder="UserName"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Password: *</label>
+                      <input
+                        type="password"
+                        name="pwd"
+                        placeholder="Password"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Confirm Password: *</label>
+                      <input
+                        type="password"
+                        name="cpwd"
+                        placeholder="Confirm Password"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button class="next action-button">Next</button>
+                <!-- <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Next"
+                /> -->
+              </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Personal Information:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 2 - 4</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="fieldlabels">First Name: *</label>
+                      <input
+                        type="text"
+                        name="fname"
+                        required
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Last Name: *</label>
+                      <input
+                        type="text"
+                        name="lname"
+                        required
+                        placeholder="Last Name"
+                      />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Gender: *</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected disabled>Select Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Date of birth: *</label>
+                      <input
+                        type="date"
+                        name="phno_2"
+                        required
+                        placeholder="Alternate Contact No."
+                      />
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Next"
+                />
+                <input
+                  type="button"
+                  name="previous"
+                  class="previous action-button-previous"
+                  value="Previous"
+                />
+              </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Contact Information: *</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 3 - 4</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Phone no: *</label>
+                      <input
+                        type="text"
+                        name="fname"
+                        required
+                        placeholder="(222) 222-2222"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">Address: *</label>
+                      <input
+                        type="text"
+                        name="lname"
+                        required
+                        placeholder="write address here"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">City: *</label>
+                      <input
+                        type="text"
+                        name="phno"
+                        required
+                        placeholder="City name."
+                      />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="fieldlabels">State: *</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected disabled>Select State</option>
+                        <option value="1">state 1</option>
+                        <option value="2">state 2</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="fieldlabels">ZipCode: *</label>
+                      <input
+                        type="text"
+                        name="phno_2"
+                        required
+                        placeholder="Alternate Contact No."
+                      />
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Submit"
+                />
+                <input
+                  type="button"
+                  name="previous"
+                  class="previous action-button-previous"
+                  value="Previous"
+                />
+              </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Finish:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 4 - 4</h2>
+                    </div>
+                  </div>
+                  <br /><br />
+                  <h2 class="purple-text text-center">
+                    <strong>SUCCESS !</strong>
+                  </h2>
+                  <br />
+                  <div class="row justify-content-center">
+                    <div class="col-3">
+                      <img
+                        src="https://i.imgur.com/GwStPmg.png"
+                        class="w-75 fit-image"
+                      />
+                    </div>
+                  </div>
+                  <br /><br />
+                  <div class="row justify-content-center">
+                    <div class="col-7 text-center">
+                      <h5 class="purple-text text-center">
+                        You Have Successfully Signed Up
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
         </div>
-        <form class="" action="#" method="post" id="myform"></form>
       </div>
     </div>
     <script src="js/main.js"></script>
