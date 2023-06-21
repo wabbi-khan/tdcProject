@@ -13,6 +13,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
     <!----===== Boxicons CSS ===== -->
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
@@ -26,14 +27,8 @@
   <body>
     <nav class="sidebar--cus close">
       <header>
-        <div class="image-text">
-          <span class="image">
-            <!--<img src="logo.png" alt="">-->
-          </span>
-
-          <div class="text logo-text">
-            <img src="assets/logo.png" alt="" />
-          </div>
+        <div class="text logo-text">
+          <img src="assets/logo.png" alt="" />
         </div>
 
         <i class="bx bx-chevron-right toggle"></i>
@@ -97,18 +92,91 @@
                 <span class="text nav-text">Patient Queue</span>
               </a>
             </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
+            <li class="nav-link--cus">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Patient Queue</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <section class="home">
-      <div class="topHeader">
+      <div class="topHeader sticky-top">
+        <h2>Dashboard</h2>
         <div class="dektopIcons">
-          <div class="logout">Logout</div>
-          <div class="logout">Message</div>
-          <div class="logout">Notification</div>
-          <div class="logout">call</div>
+          <div class="bell">
+            <i class="bx bx-bell"></i>
+            <span>2</span>
+          </div>
+          <div class="bell pencil">
+            <i class="bx bx-pencil"></i>
+          </div>
+          <div class="bell envelope">
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div class="logout">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class=""
+                  ><img src="./assets/images.png" alt="img"
+                /></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="icons">
           <!-- Example split danger button -->
@@ -136,21 +204,41 @@
       <div class="padd-wrap">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-12 col-sm-12">
-              <div class="box--wrap"></div>
+            <div class="col-xs-12 col-sm-4 col-md-3">
+              <div class="box--wrap">
+                <div>
+                  <span>Total Patients</span>
+                  <h2>300</h2>
+                </div>
+                <div><img src="./assets/patient.png" alt="patien" /></div>
+              </div>
             </div>
-            <div class="col-lg-3 col-md-12 col-sm-12">
-              <div class="box--wrap"></div>
+            <div class="col-xs-12 col-sm-4 col-md-3">
+              <div class="box--wrap">
+                <div>
+                  <span>Total Appointments</span>
+                  <h2>3</h2>
+                </div>
+                <div><img src="./assets/appointment.png" alt="patien" /></div>
+              </div>
             </div>
-            <div class="col-lg-3 col-md-12 col-sm-12">
-              <div class="box--wrap"></div>
+            <div class="col-xs-12 col-sm-4 col-md-3">
+              <div class="box--wrap">
+                <div>
+                  <span>New Message</span>
+                  <h2>10</h2>
+                </div>
+                <div><img src="./assets/comments.png" alt="patien" /></div>
+              </div>
             </div>
-
-            <div class="col-lg-3 col-md-12 col-sm-12">
-              <div class="box--wrap"></div>
-            </div>
-            <div class="col-lg-3 col-md-12 col-sm-12">
-              <div class="box--wrap"></div>
+            <div class="col-xs-12 col-sm-4 col-md-3">
+              <div class="box--wrap">
+                <div>
+                  <span>Current Patient Care</span>
+                  <h2>300</h2>
+                </div>
+                <div><img src="./assets/healthcare.png" alt="patien" /></div>
+              </div>
             </div>
           </div>
         </div>
