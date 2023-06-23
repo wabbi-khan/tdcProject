@@ -16,6 +16,9 @@
     <!-- ==== Custom CSS ==== -->
     <link rel="stylesheet" href="./style/style.css" />
     <!-- <script defer src="./js/sideBar.js"></script> -->
+    <!-- ======== ? Date Picker======= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
     <title>Dashboard</title>
 </head>

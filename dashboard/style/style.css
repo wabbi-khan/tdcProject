@@ -649,35 +649,22 @@ tbody tr {
 
 /* ? ==== Appointments List ==== */
 
-.search {
-  position: relative;
-  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+.datePicker button {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
+  border: none !important;
 }
-
-.search input {
-  height: 60px;
-  text-indent: 25px;
-  border: 2px solid #d6d4d4;
+.datePicker input {
+  padding: 10px 20px;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
 }
-
-.search input:focus {
-  box-shadow: none;
-  border: 2px solid var(--primary-color);
-}
-
-.search .fa-search {
-  position: absolute;
-  top: 20px;
-  left: 16px;
-}
-
-.search button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  height: 50px;
-  width: 110px;
-  background: var(--primary-color);
+.datePicker input:focus,
+.datePicker input:active {
+  border-color: none !important;
+  box-shadow: none !important;
 }
 @media only screen and (max-width: 600px) {
   .topHeader {

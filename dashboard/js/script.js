@@ -12,3 +12,5 @@ function toggleDropdown() {
   icon.classList.toggle("bx-chevron-down");
   icon.classList.toggle("rotate");
 }
+
+// ? ==== Date picker
