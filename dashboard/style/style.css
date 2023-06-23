@@ -65,6 +65,7 @@ body {
 #icon.rotate {
   animation: rotateAnimation 0.3s ease-in-out;
 }
+
 /* ===== Reusable code - Here ===== */
 
 .sidebar--cus li {
@@ -72,7 +73,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .sidebar--cus header img,
@@ -594,6 +595,90 @@ body.dark .home .text {
   transition: all 0.3s ease-out;
   color: #ffffff;
 }
+
+/* ===== Current Patient ===== */
+.table {
+  background-color: white;
+  border-radius: 10px !important;
+  text-align: center;
+}
+.table thead {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 200px !important;
+}
+tbody tr {
+  margin-left: 200px !;
+}
+.removebtn,
+.removebtn:hover {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+.table button {
+  background: transparent;
+}
+.patientImg img {
+  width: 60px !important;
+  height: 60px !important;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.table img {
+  width: 35px;
+}
+.table .message {
+  font-size: 30px !important;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.table .message:hover {
+  color: black;
+}
+
+.customModal .modal-content {
+  border: 4px solid var(--primary-color);
+  border-radius: 15px;
+}
+.modal-footer button:nth-child(1) {
+  background-color: var(--primary-color);
+  border: none !important;
+}
+
+/* ? ==== Appointments List ==== */
+
+.search {
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+
+.search input {
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+  box-shadow: none;
+  border: 2px solid var(--primary-color);
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  background: var(--primary-color);
+}
 @media only screen and (max-width: 600px) {
   .topHeader {
     padding: 20px;
@@ -602,9 +687,6 @@ body.dark .home .text {
   }
   .topHeader .icons {
     display: block;
-    /* justify-content: flex-end; */
-    /* align-items: center; */
-    /* margin: 0 auto; */
   }
   .topHeader .dektopIcons {
     display: none;
@@ -612,6 +694,7 @@ body.dark .home .text {
   .topHeader h2 {
     font-size: 20px;
     align-items: center;
+    font-size: 14px !important;
   }
   .padd-wrap {
     padding: 10px;
@@ -634,5 +717,14 @@ body.dark .home .text {
   }
   .sidebar--cus + .home {
     filter: blur(10px);
+  }
+
+  /* === Current Patien ======*/
+  thead {
+    font-size: 13px;
+  }
+  .customModal {
+    width: 300px;
+    margin-left: 100px;
   }
 }

@@ -5,7 +5,6 @@
 
     <i class="bx bx-chevron-right toggle"></i>
 </header>
-
 <div class="menu-bar">
     <div class="menu">
         <div class="ownerImg" id="myDIV">
@@ -24,7 +23,7 @@
                 </a>
             </li>
 
-            <li class="nav-link--cus" onclick="toggleDropdown()">
+            <li class="nav-link--cus dropDown" onclick="toggleDropdown()">
                 <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bx bx-bar-chart-alt-2 icon"></i>
                     <span class="text nav-text">Patient Care
@@ -32,21 +31,21 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Current</a></li>
+                    <li><a class="dropdown-item" href="/TDCPROJECT/dashboard/currentpatient.php">Current</a></li>
                     <hr class="dropdown-divider" />
                     <li><a class="dropdown-item" href="#">Completed</a></li>
                 </ul>
             </li>
 
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/mypatients.php">
                     <i class="bx bx-bell icon"></i>
                     <span class="text nav-text">My Patients </span>
                 </a>
             </li>
 
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/appointmentlist.php">
                     <i class="bx bx-pie-chart-alt icon"></i>
                     <span class="text nav-text">Appointments</span>
                 </a>

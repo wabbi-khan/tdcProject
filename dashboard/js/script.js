@@ -1,4 +1,3 @@
-
 // ? open and close Side Bar
 const body = document.querySelector("body"),
   sidebar = body.querySelector("nav"),
@@ -6,7 +5,6 @@ const body = document.querySelector("body"),
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
-
 
 function toggleDropdown() {
   var icon = document.getElementById("icon");
