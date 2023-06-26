@@ -50,8 +50,5 @@
         </div>
     </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-    flatpickr("#datepicker");
-</script>
+
 <?php include('./includes/footer.php') ?>

@@ -33,7 +33,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/TDCPROJECT/dashboard/currentpatient.php">Current</a></li>
                     <hr class="dropdown-divider" />
-                    <li><a class="dropdown-item" href="#">Completed</a></li>
+                    <li><a class="dropdown-item" href="/TDCPROJECT/dashboard/completedPatients.php">Completed</a></li>
                 </ul>
             </li>
 
@@ -52,7 +52,7 @@
             </li>
 
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/mySchedule.php">
                     <i class="bx bx-heart icon"></i>
                     <span class="text nav-text">My Schedule</span>
                 </a>
