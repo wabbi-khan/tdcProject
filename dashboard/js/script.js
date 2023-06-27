@@ -8,9 +8,11 @@ toggle.addEventListener("click", () => {
 
 function toggleDropdown() {
   var icon = document.getElementById("icon");
+  var dropdown = document.querySelector(".dropDown");
   icon.classList.toggle("bx-chevron-up");
   icon.classList.toggle("bx-chevron-down");
   icon.classList.toggle("rotate");
+  dropdown.classList.toggle("show-dropdown");
   console.log("clicking");
 }
 // ? ==== Vertical tabs on medical history

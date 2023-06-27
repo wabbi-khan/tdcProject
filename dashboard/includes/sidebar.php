@@ -59,7 +59,7 @@
             </li>
 
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/instantConnect.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Instant Connect</span>
                 </a>
