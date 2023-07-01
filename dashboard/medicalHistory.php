@@ -13,7 +13,7 @@
                     <div class="profileCard">
                         <div class="row">
                             <div class="col-md-8">
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center flex-wrap">
                                     <div class="px-4">
                                         <img src="./assets/images.png" alt="">
                                     </div>
@@ -117,11 +117,11 @@
                         <div id="MedialHistory" class="tabcontent">
                             <div class="tabs-container">
                                 <ul class="tabs">
-                                    <li class="tab-link current" data-tab="tab1">Diagnosis</li>
-                                    <li class="tab-link" data-tab="tab2">Social</li>
-                                    <li class="tab-link" data-tab="tab3">Relative</li>
-                                    <li class="tab-link" data-tab="tab4">Medications</li>
-                                    <li class="tab-link" data-tab="tab5">Sure Script</li>
+                                    <li> <button data-tab="tab1" class="tab-link current"> Diagnosis</button></li>
+                                    <li> <button data-tab="tab2" class="tab-link"> Social</button></li>
+                                    <li> <button data-tab="tab3" class="tab-link"> Relative</button></li>
+                                    <li> <button data-tab="tab4" class="tab-link"> Medications</button></li>
+                                    <li> <button data-tab="tab5" class="tab-link"> Sure Script</button></li>
                                 </ul>
 
                                 <div id="tab1" class="tab-content current">
