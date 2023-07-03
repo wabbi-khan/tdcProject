@@ -35,15 +35,12 @@
                                         <img src="./assets/comments.png" alt="message">
                                     </button>
 
-                                    <!-- <i class='bx bxs-chat message'></i> -->
                                 </td>
                                 <td class="pt-4">
-                                    <!-- <i class='bx bxs-video-plus message'></i> -->
                                     <img src="./assets/video-camera.png" alt="video call">
                                 </td>
-                                <td class="btn mt-4 removebtn">
-                                    <a href="#" class="text-decoration-none" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
+                                <td class="pt-4">
+                                    <a href="#" class="removebtn text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
                                         <span class="">Patient Care
                                             <i class="bx bx-chevron-down" id="icon"></i>
                                         </span>
@@ -51,8 +48,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="/">Encounter Notes</a></li>
                                         <hr class="dropdown-divider" />
-                                        <li><a class="dropdown-item"
-                                                href="/TDCPROJECT/dashboard/medicalHistory.php">Medical History</a>
+                                        <li><a class="dropdown-item" href="/TDCPROJECT/dashboard/medicalHistory.php">Medical History</a>
                                         </li>
                                     </ul>
                                 </td>

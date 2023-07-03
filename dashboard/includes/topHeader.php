@@ -14,7 +14,8 @@
     </div>
     <div class="logout">
         <div class="btn-group">
-            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 <span class=""><img src="./assets/images.png" alt="img" /></span>
             </button>
             <ul class="dropdown-menu">
@@ -26,9 +27,11 @@
 </div>
 <div class="icons">
     <!-- Example split danger button -->
-    <div class="btn-group">
-        <button type="button" class="btn btn-info text-white dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span span class="visually-hidden">Toggle Dropdown</span>
+    <div class="btn-group topDropDown">
+        <button type="button" class="btn text-white dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bx bx-chevron-down" id="icon"></i>
+            <!-- <span span class="visually-hidden">Toggle Dropdown</span> -->
         </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Messages</a></li>

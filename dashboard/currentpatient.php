@@ -11,7 +11,7 @@
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead class="py-5">
-                            <tr class="py-5">
+                            <tr class="py-5 text-nowrap">
                                 <th class="py-3" scope="col">#</th>
                                 <th class="py-3" scope="col">Date/Time</th>
                                 <th class="py-3" scope="col">Patient Name</th>
@@ -40,10 +40,9 @@
                                     <!-- <i class='bx bxs-video-plus message'></i> -->
                                     <img src="./assets/video-camera.png" alt="video call">
                                 </td>
-                                <td class="btn mt-4 removebtn">
-
-                                    <i class='bx bx-trash'></i>
-                                    <span>
+                                <td class="pt-4">
+                                    <span class="removebtn">
+                                        <i class='bx bx-trash'></i>
 
                                         Remove
                                     </span>
@@ -60,8 +59,7 @@
     </div>
     <!-- Model -->
 </section>
-<div class="modal fade customModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade customModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -71,8 +69,7 @@
             <div class="modal-body">
                 <div class="mb-3">
 
-                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                        placeholder="Wrtie your messase here" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Wrtie your messase here" rows="3"></textarea>
                 </div>
             </div>
             <div class="modal-footer">

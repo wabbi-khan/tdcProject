@@ -408,6 +408,14 @@ body.dark .home .text {
 .icons {
   display: none;
 }
+.icons .topDropDown button {
+  background-color: var(--primary-color) !important;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px !important;
+
+  /* margin-left: 100px; */
+}
 .profile-menu .dropdown-menu {
   right: 0;
   left: unset;
@@ -614,6 +622,12 @@ body.dark .home .text {
 tbody tr {
   margin-left: 200px !;
 }
+.removebtn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
 .removebtn,
 .removebtn:hover {
   background-color: var(--primary-color) !important;
@@ -705,7 +719,7 @@ tbody tr {
 .profileCard .rightProfile {
   background-color: rgb(245, 245, 245);
   width: 100%;
-  height: 150px;
+  height: auto;
   border-radius: 5px;
   padding: 25px;
 }
@@ -758,7 +772,7 @@ tbody tr {
 .tab button.active::before {
   content: "";
   position: absolute;
-  right: -10px;
+  right: -8px;
   width: 0;
   height: 0;
   top: 22px;
@@ -791,6 +805,17 @@ tbody tr {
   padding: 0;
   margin: 0;
   display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.tabs::-webkit-scrollbar {
+  /* width: 5px !important; */
+  height: 5px;
+  background-color: var(--icon-bg) !important;
+}
+.tabs::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
 }
 
 .tab-link {
@@ -802,6 +827,7 @@ tbody tr {
   margin-left: 10px;
   border-radius: 5px;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .tab-link.current {
@@ -833,15 +859,28 @@ tbody tr {
 .tab-content.current {
   display: block;
 }
-#tab1 .table-responsive {
+#personalDetails .table-responsive,
+#tab2 .table-responsive,
+#encounterNotes .table-responsive {
   height: 400px !important;
   overflow-y: auto;
 }
-#tab1 .table-responsive::-webkit-scrollbar {
+#tab1 .tabRow1 {
+  height: 350px;
+  overflow-y: auto;
+}
+#personalDetails .table-responsive::-webkit-scrollbar,
+#tab1 .tabRow1::-webkit-scrollbar,
+#tab2 .table-responsive::-webkit-scrollbar,
+#encounterNotes .table-responsive::-webkit-scrollbar {
   width: 10px;
   background-color: var(--icon-bg) !important;
+  border-radius: 10px;
 }
-#tab1 .table-responsive::-webkit-scrollbar-thumb {
+#personalDetails .table-responsive::-webkit-scrollbar-thumb,
+#tab1 .tabRow1::-webkit-scrollbar-thumb,
+#tab2 .table-responsive::-webkit-scrollbar-thumb,
+#encounterNotes .table-responsive::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
 }
@@ -857,6 +896,7 @@ tbody tr {
   font-weight: 700;
   border-radius: 5px 5px 0px 0px;
 }
+
 #tab1 .inputText {
   text-align: justify;
   hyphens: auto;
@@ -889,6 +929,20 @@ tbody tr {
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
+  font-weight: 200;
+  font-size: 15px;
+}
+.tab-content .btn {
+  background-color: var(--primary-color) !important;
+  border: none;
+}
+.forwareToPatient {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 5px;
+  font-size: 15px;
 }
 /* ? ===== My Schedule ====== */
 .mySchedule .timePicker {
@@ -989,7 +1043,7 @@ tbody tr {
   width: 50%;
 }
 
-/* ? ==== Responsive ======= */
+/* ? ==== Mobile  Responsive ======= */
 @media only screen and (max-width: 600px) {
   .topHeader {
     padding: 20px;
@@ -1009,6 +1063,7 @@ tbody tr {
   }
   .padd-wrap {
     padding: 10px;
+    margin-left: 30px;
   }
   .box--wrap {
     width: 100%;
@@ -1038,11 +1093,22 @@ tbody tr {
     width: 300px;
     margin-left: 100px;
   }
-  .tabs {
-    flex-wrap: wrap;
-  }
+
   .sidebar--cus.close {
     width: 0px;
+  }
+  .medicalDetails {
+    height: 100% !important;
+    padding: 15px;
+  }
+  .tab,
+  .tabcontent {
+    width: 100% !important;
+    padding: 0;
+  }
+  .sidebar--cus.close ~ .home {
+    width: 100%;
+    left: 0;
   }
 }
 
