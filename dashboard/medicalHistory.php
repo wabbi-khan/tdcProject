@@ -129,7 +129,7 @@
                                         Data
                                     </div>
                                     <div class="row pt-4">
-                                        <div class="col-6 border-end d-flex">
+                                        <div class="col-md-6 mt-4 border-end d-flex">
                                             <span> <input class="form-check-input" type="checkbox" value="" />
                                             </span>
                                             <span class="inputText">
@@ -141,7 +141,31 @@
                                                 sint dolore! Temporibus.
                                             </span>
                                         </div>
-                                        <div class="col-6 d-flex">
+                                        <div class="col-md-6 mt-4 d-flex">
+                                            <span> <input class="form-check-input" type="checkbox" value="" />
+                                            </span>
+                                            <span class="inputText">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Cupiditate incidunt qui commodi maiores, obcaecati molestias minima quod
+                                                dolorum, voluptatum iusto ut quam saepe fugit voluptatibus velit
+                                                possimus
+                                                sint dolore! Temporibus.
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6 mt-4 d-flex">
+                                            <span> <input class="form-check-input" type="checkbox" value="" />
+                                            </span>
+                                            <span class="inputText">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Cupiditate incidunt qui commodi maiores, obcaecati molestias minima quod
+                                                dolorum, voluptatum iusto ut quam saepe fugit voluptatibus velit
+                                                possimus
+                                                sint dolore! Temporibus.
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6 mt-4 d-flex">
                                             <span> <input class="form-check-input" type="checkbox" value="" />
                                             </span>
                                             <span class="inputText">
@@ -154,7 +178,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row mt-4">
                                         <div class="col-md-12">
                                             <div class="btn btn-primary">Save</div>
                                         </div>
@@ -230,10 +254,10 @@
                                                     <th class="py-3" scope="col">Data</th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="">
+                                            <tbody>
                                                 <tr>
                                                     <td class="pt-4">
-                                                        <input class="form-check-input" type="checkbox" value=""
+                                                        <input class="form-check-input pl-1" type="checkbox" value=""
                                                             onclick="toggleRowSelection(this)" />
                                                         <span> Social History
                                                     </td>
@@ -247,7 +271,81 @@
                                     </div>
                                 </div>
                                 <div id="tab4" class="tab-content">
-                                    Content for Tab 4
+                                    <div class="tableHead">
+                                        Are you on any medications?
+
+                                    </div>
+                                    <div class="row pt-4">
+                                        <div class="col-md-6 mt-4 border-end ">
+                                            <div class="d-flex justify-content-around">
+
+                                                <div>1. Any Medications?
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+
+                                                        <span>Yes</span><input class="form-check-input ms-1"
+                                                            type="radio" value="" />
+                                                    </div>
+                                                    <div class="px-2">
+
+                                                        <span>No</span><input class="form-check-input ms-1" type="radio"
+                                                            value="" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mt-4">
+                                            <div class="d-flex justify-content-around">
+
+                                                <div>2. Do you have any allergies?
+
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div>
+
+                                                        <span>Yes</span><input class="form-check-input ms-1"
+                                                            type="radio" value="" />
+                                                    </div>
+                                                    <div class="px-2">
+
+                                                        <span>No</span><input class="form-check-input ms-1" type="radio"
+                                                            value="" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-4">
+                                            <div class="d-flex justify-content-around">
+
+                                                <div>
+                                                    3. Please list all hospitalizations and surgeries
+
+                                                </div>
+                                                <div id="input-container">
+                                                    <div>
+
+                                                        <input type="text" name="input-field-1"
+                                                            placeholder="Write here">
+                                                        <button onclick="removeInput(this)">
+                                                            <i class='bx bx-trash'></i>
+                                                            Remove
+                                                        </button>
+                                                    </div>
+                                                    <button onclick="addInput()">Add Field</button>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-12">
+                                            <div class="btn btn-primary">Save</div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="tab5" class="tab-content">
                                     Content for Tab 5
@@ -276,6 +374,7 @@
 </section>
 
 <script>
+// tabs
 document.addEventListener("DOMContentLoaded", function() {
     const tabLinks = document.querySelectorAll(".tab-link");
     const tabContents = document.querySelectorAll(".tab-content");
@@ -300,6 +399,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <script>
+// if check select whole row
 function toggleRowSelection(checkbox) {
     var row = checkbox.closest('tr');
     var inputField = row.querySelector('input[type="text"]');
@@ -311,6 +411,37 @@ function toggleRowSelection(checkbox) {
         row.classList.remove('selected-row');
         inputField.disabled = true;
     }
+}
+
+// dynamically add remove input field
+var counter = 1;
+
+function addInput() {
+    counter++;
+
+    var inputContainer = document.getElementById("input-container");
+
+    var newInput = document.createElement("input");
+    newInput.type = "text";
+    newInput.name = "input-field-" + counter;
+    newInput.placeholder = "write here";
+
+    var removeButton = document.createElement("button");
+    removeButton.innerHTML = '<i class="bx bx-trash"></i> Remove';
+    removeButton.onclick = function() {
+        removeInput(this);
+    };
+
+    var newDiv = document.createElement("div");
+    newDiv.appendChild(newInput);
+    newDiv.appendChild(removeButton);
+
+    inputContainer.insertBefore(newDiv, inputContainer.firstChild);
+}
+
+function removeInput(button) {
+    var divToRemove = button.parentNode;
+    divToRemove.parentNode.removeChild(divToRemove);
 }
 </script>
 <?php include('./includes/footer.php') ?>
