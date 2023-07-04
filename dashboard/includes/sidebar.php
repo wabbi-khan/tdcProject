@@ -17,7 +17,7 @@
 
         <ul class="menu-links--cus">
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/index.php">
                     <i class="bx bx-home-alt icon"></i>
                     <span class="text nav-text">Dashboard</span>
                 </a>

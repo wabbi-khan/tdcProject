@@ -7,6 +7,7 @@
     flatpickr("#datepicker");
 </script>
 <script defer src="./js/script.js"></script>
+<script defer src="./js/filter-multi-select-bundle.min.js"></script>
 </body>
 
 </html>

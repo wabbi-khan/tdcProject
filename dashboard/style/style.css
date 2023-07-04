@@ -20,6 +20,9 @@ body {
   color: #fff;
 }
 
+.form-check-input:checked {
+  background-color: var(--primary-color);
+}
 /* ===== Sidebar ===== */
 
 .sidebar--cus {
@@ -616,7 +619,6 @@ body.dark .home .text {
 .table thead {
   background-color: var(--primary-color);
   color: white;
-  padding: 200px !important;
   text-align: center;
 }
 tbody tr {
@@ -727,7 +729,7 @@ tbody tr {
   background-color: white;
   width: 100%;
   /* height: 100% !important ; */
-  height: 600px;
+  height: 700px;
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: 0 0 15px #7777;
@@ -755,6 +757,7 @@ tbody tr {
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
+  white-space: nowrap;
 }
 
 /* Change background color of buttons on hover */
@@ -787,13 +790,13 @@ tbody tr {
 .tabcontent {
   float: left;
   padding-left: 30px;
-  width: 70%;
+  width: 75%;
   border-left: none;
 }
 .tabcontent .table {
   border: 1px solid rgb(236, 236, 236);
 }
-.tabcontent .table-responsive {
+.table-responsive {
   border-radius: 10px !important;
 }
 .tabs-container {
@@ -861,7 +864,8 @@ tbody tr {
 }
 #personalDetails .table-responsive,
 #tab2 .table-responsive,
-#encounterNotes .table-responsive {
+#encounterNotes .table-responsive,#reports .table-responsive,
+ #medications .table-responsive{
   height: 400px !important;
   overflow-y: auto;
 }
@@ -872,7 +876,9 @@ tbody tr {
 #personalDetails .table-responsive::-webkit-scrollbar,
 #tab1 .tabRow1::-webkit-scrollbar,
 #tab2 .table-responsive::-webkit-scrollbar,
-#encounterNotes .table-responsive::-webkit-scrollbar {
+#encounterNotes .table-responsive::-webkit-scrollbar,
+#reports .table-responsive::-webkit-scrollbar,
+#medications .table-responsive::-webkit-scrollbar  {
   width: 10px;
   background-color: var(--icon-bg) !important;
   border-radius: 10px;
@@ -880,7 +886,9 @@ tbody tr {
 #personalDetails .table-responsive::-webkit-scrollbar-thumb,
 #tab1 .tabRow1::-webkit-scrollbar-thumb,
 #tab2 .table-responsive::-webkit-scrollbar-thumb,
-#encounterNotes .table-responsive::-webkit-scrollbar-thumb {
+#encounterNotes .table-responsive::-webkit-scrollbar-thumb,
+#reports .table-responsive::-webkit-scrollbar-thumb ,
+#medications .table-responsive::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
 }
@@ -943,6 +951,15 @@ tbody tr {
   white-space: nowrap;
   border-radius: 5px;
   font-size: 15px;
+}
+
+.sureScriptForm {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 15px #9d9d9d77;
+  padding: 20px;
+  /* text-align: center; */
 }
 /* ? ===== My Schedule ====== */
 .mySchedule .timePicker {
@@ -1043,6 +1060,237 @@ tbody tr {
   width: 50%;
 }
 
+/* ? ===== Multple select fiels ==== */
+.filter-multi-select.dropup,
+.filter-multi-select.dropdown {
+  position: relative;
+}
+
+.filter-multi-select .dropdown-toggle::after {
+  all: unset;
+}
+
+.filter-multi-select .dropdown-toggle:empty::after {
+  all: unset;
+}
+
+.filter-multi-select > .dropdown-toggle::before {
+  display: inline-block;
+  margin-right: 0.255em;
+  vertical-align: middle;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.filter-multi-select > .dropdown-toggle:empty::before {
+  margin-right: 0.255em;
+}
+
+.filter-multi-select > .viewbar {
+  white-space: normal;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: auto;
+  cursor: pointer;
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item {
+  margin: 0.125rem 0.25rem 0.125rem 0;
+  padding: 0px 0px 0px 0.5em;
+  display: inline-flex;
+  height: 1.875em;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 1.1em;
+  align-items: center;
+  vertical-align: baseline;
+  padding: 5px 10px;
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item > button {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item > button:hover {
+  filter: contrast(50%);
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item.disabled {
+  display: inline-flex;
+  padding: 0px 0.5em 0px 0.5em;
+  filter: grayscale(80%) brightness(150%);
+}
+
+.filter-multi-select > .viewbar > .selected-items > .item.disabled > button {
+  display: none;
+}
+
+.filter-multi-select > .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  z-index: 1000;
+  display: none;
+  float: left;
+  max-height: 50vh;
+  min-width: 10rem;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.875rem;
+  text-align: left;
+  list-style: none;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.filter-multi-select > .dropdown-menu.show {
+  display: block;
+}
+
+.filter-multi-select > .dropdown-menu > .filter > input {
+  font-size: 0.875rem;
+}
+
+.filter-multi-select > .dropdown-menu > .filter > button {
+  position: absolute;
+  border: 0;
+  background-color: transparent;
+  font-weight: 900;
+  color: #ccc;
+  right: 2rem;
+  top: 1rem;
+}
+
+.filter-multi-select > .dropdown-menu > .filter > button:hover {
+  color: #aaa;
+}
+
+.filter-multi-select .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.filter-multi-select .dropdown-item.disabled,
+.filter-multi-select .dropdown-item:disabled {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.filter-multi-select .dropdown-item:hover,
+.filter-multi-select .dropdown-item:focus {
+  background-color: inherit;
+}
+
+.filter-multi-select .dropdown-item.active,
+.filter-multi-select .dropdown-item:active {
+  color: inherit;
+}
+
+.filter-multi-select .dropdown-item .custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filter-multi-select .dropdown-item .custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.filter-multi-select .dropdown-item .custom-control-label::before {
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  position: absolute;
+  top: 0.15625rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-color: #ffffff;
+  border: #adb5bd solid 1px;
+}
+
+.filter-multi-select .dropdown-item .custom-control-label::after {
+  position: absolute;
+  top: 0.15625rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background: no-repeat 50% / 50% 50%;
+}
+
+.filter-multi-select
+  .dropdown-item
+  .custom-checkbox:checked
+  ~ .custom-control-label::before,
+.filter-multi-select
+  .dropdown-item
+  .custom-checkbox:indeterminate
+  ~ .custom-control-label::before {
+  /* border-color: pink; */
+  background-color: var(--primary-color);
+}
+
+.filter-multi-select
+  .dropdown-item
+  .custom-checkbox:checked
+  ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23FFFFFF' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.filter-multi-select
+  .dropdown-item
+  .custom-checkbox:indeterminate
+  ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%23FFFFFF' d='M0 2h4'/%3e%3c/svg%3e");
+}
+.selected-items button {
+  margin-left: 10px;
+}
+.multiDrop {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0 auto;
+  box-shadow: 0 0 15px #9d9d9d77;
+  /* text-align: center; */
+}
+.multiDrop button {
+  background-color: var(--primary-color);
+  border: none;
+}
 /* ? ==== Mobile  Responsive ======= */
 @media only screen and (max-width: 600px) {
   .topHeader {
@@ -1085,7 +1333,6 @@ tbody tr {
     filter: blur(10px);
   }
 
-  /* === Current Patien ======*/
   thead {
     font-size: 13px;
   }
@@ -1110,8 +1357,29 @@ tbody tr {
     width: 100%;
     left: 0;
   }
+  .multiDrop {
+    padding-bottom: 20px;
+    text-align: center;
+  }
 }
 
-.form-check-input:checked {
-  background-color: var(--primary-color);
+
+/* ? ==== Tablet  Responsive ======= */
+@media only screen and (max-width: 900px){
+  .sidebar--cus.close ~ .home {
+    width: 100%;
+    left: 0;
+  }
+  
+  .sidebar--cus.close {
+    width: 0px;
+  }
+  .tab button{
+    font-weight: 400;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  .tab{
+    width: 30%;
+  }
 }

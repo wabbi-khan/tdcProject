@@ -16,7 +16,7 @@
             </div>
             <div class="row">
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-hover table-bordered">
                         <thead class="py-5">
                             <tr class="py-5">
                                 <th class="py-3" scope="col">Date</th>
@@ -27,7 +27,7 @@
                                 <th class="py-3" scope="col">To Time</th>
                                 <th class="py-3" scope="col">Status</th>
                             </tr>
-                        <tbody class="text-center">
+                        <tbody>
                             <tr>
                                 <td class="pt-4" scope="row">...
                                 </td>
