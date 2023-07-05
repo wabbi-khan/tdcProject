@@ -446,9 +446,6 @@ body.dark .home .text {
 
 .topHeader .dektopIcons {
   display: flex;
-  /* justify-content: flex-end; */
-  /* align-items: center; */
-  /* margin: 0 auto; */
   gap: 25px;
 }
 .bell {
@@ -620,9 +617,7 @@ body.dark .home .text {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-}
-tbody tr {
-  margin-left: 200px !;
+  white-space: nowrap
 }
 .removebtn {
   padding: 10px 20px;
@@ -736,15 +731,10 @@ tbody tr {
 }
 /* ? Tabs */
 
-.tab {
-  float: left;
-  width: 20%;
-}
+
 
 /* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
+.tablinks {
   color: var(--primary-color);
   font-weight: 600;
   background-color: var(--icon-bg);
@@ -760,19 +750,13 @@ tbody tr {
   white-space: nowrap;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: var(--primary-color);
-  color: white;
-}
-
 /* Create an active/current "tab button" class */
-.tab button.active {
+.tablinks.active {
   background-color: var(--primary-color);
   color: white;
   position: relative;
 }
-.tab button.active::before {
+.tablinks.active::before {
   content: "";
   position: absolute;
   right: -8px;
@@ -783,44 +767,14 @@ tbody tr {
   border-top: 0;
   border-bottom: 10px solid var(--primary-color);
   transform: rotate(90deg);
-  /* left: 0; */
 }
 
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding-left: 30px;
-  width: 75%;
-  border-left: none;
-}
-.tabcontent .table {
-  border: 1px solid rgb(236, 236, 236);
-}
 .table-responsive {
   border-radius: 10px !important;
 }
-.tabs-container {
-  width: 100%;
-}
 
-.tabs {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
-.tabs::-webkit-scrollbar {
-  /* width: 5px !important; */
-  height: 5px;
-  background-color: var(--icon-bg) !important;
-}
-.tabs::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 5px;
-}
 
+/* Sub tabs */
 .tab-link {
   cursor: pointer;
   padding: 10px 30px;
@@ -833,12 +787,12 @@ tbody tr {
   white-space: nowrap;
 }
 
-.tab-link.current {
+.tab-link.active {
   background-color: var(--primary-color);
   color: white;
   position: relative;
 }
-.tab-link.current::after {
+.tab-link.active::after {
   content: "";
   position: absolute;
   top: 40px;
@@ -852,31 +806,34 @@ tbody tr {
   transform: rotate(180deg);
 }
 
-.tab-content {
-  margin-top: 10px;
-  display: none;
-  padding: 20px;
-  /* border: 1px solid gray; */
-}
 
-.tab-content.current {
-  display: block;
+.tab-content{
+  width:100%;
 }
 #personalDetails .table-responsive,
-#tab2 .table-responsive,
+#social .table-responsive,#relative .table-responsive,
 #encounterNotes .table-responsive,
 #reports .table-responsive,
 #medications .table-responsive {
   height: 400px !important;
   overflow-y: auto;
 }
-#tab1 .tabRow1 {
+#MedialHistory .tabRow1 {
   height: 350px;
   overflow-y: auto;
 }
+#MedialHistory ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
 #personalDetails .table-responsive::-webkit-scrollbar,
-#tab1 .tabRow1::-webkit-scrollbar,
-#tab2 .table-responsive::-webkit-scrollbar,
+#MedialHistory .tabRow1::-webkit-scrollbar,
+#social .table-responsive::-webkit-scrollbar,#relative .table-responsive::-webkit-scrollbar,
 #encounterNotes .table-responsive::-webkit-scrollbar,
 #reports .table-responsive::-webkit-scrollbar,
 #medications .table-responsive::-webkit-scrollbar {
@@ -885,16 +842,16 @@ tbody tr {
   border-radius: 10px;
 }
 #personalDetails .table-responsive::-webkit-scrollbar-thumb,
-#tab1 .tabRow1::-webkit-scrollbar-thumb,
-#tab2 .table-responsive::-webkit-scrollbar-thumb,
+#MedialHistory .tabRow1::-webkit-scrollbar-thumb,
+#social .table-responsive::-webkit-scrollbar-thumb,#relative .table-responsive::-webkit-scrollbar-thumb,
 #encounterNotes .table-responsive::-webkit-scrollbar-thumb,
 #reports .table-responsive::-webkit-scrollbar-thumb,
 #medications .table-responsive::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
 }
-#tab1 .tableHead,
-#tab4 .tableHead {
+#MedialHistory .tableHead,
+#medi .tableHead {
   background-color: var(--primary-color);
   width: 100%;
   /* height: 40px; */
@@ -906,7 +863,7 @@ tbody tr {
   border-radius: 5px 5px 0px 0px;
 }
 
-#tab1 .inputText {
+#MedialHistory .inputText {
   text-align: justify;
   hyphens: auto;
   padding-left: 10px;
@@ -941,10 +898,7 @@ tbody tr {
   font-weight: 200;
   font-size: 15px;
 }
-.tab-content .btn {
-  background-color: var(--primary-color) !important;
-  border: none;
-}
+
 .forwareToPatient {
   background-color: var(--primary-color);
   color: white;
@@ -953,15 +907,18 @@ tbody tr {
   border-radius: 5px;
   font-size: 15px;
 }
-
+.medicalDetails .tabShowMob{
+  width: 30%;
+}
 .sureScriptForm {
   background-color: rgb(245, 245, 245);
   width: 100%;
   height: auto;
   box-shadow: 0 0 15px #9d9d9d77;
   padding: 20px;
-  /* text-align: center; */
 }
+
+
 /* ? ===== My Schedule ====== */
 .mySchedule .timePicker {
   padding: 2px 10px;
@@ -1359,10 +1316,20 @@ tbody tr {
     height: 100% !important;
     padding: 15px;
   }
-  .tab,
-  .tabcontent {
-    width: 100% !important;
-    padding: 0;
+  .medicalDetails .tabOnMob{
+    width: 100%;
+  } .medicalDetails .tabOnMob{
+    flex-direction: column;
+  }
+  .medicalDetails .nav-pills{
+    width: 100%;
+  }
+  #MedialHistory ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
   }
   .sidebar--cus.close ~ .home {
     width: 100%;
@@ -1384,12 +1351,20 @@ tbody tr {
   .sidebar--cus.close {
     width: 0px;
   }
-  .tab button {
-    font-weight: 400;
-    padding: 15px 20px;
-    font-size: 14px;
+  .medicalDetails .tabOnMob{
+    width: 100%;
+  } .medicalDetails .tabOnMob{
+    flex-direction: column;
   }
-  .tab {
-    width: 30%;
+  .medicalDetails .nav-pills{
+    width: 100%;
   }
+  #MedialHistory ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+  }
+  
 }

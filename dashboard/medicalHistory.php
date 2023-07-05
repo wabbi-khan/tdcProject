@@ -57,653 +57,482 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="medicalDetails">
-                        <div class="tab">
-                            <button class="tablinks mb-3" onclick='openCity(event,"personalDetails")' id="defaultOpen">
-                                <i class="mx-2 fa fa-user" aria-hidden="true"></i>Personal Details </button>
-                            <button class="tablinks mb-3" onclick='openCity(event,"MedialHistory")'>
-                                <i class="mx-2 fa fa-stethoscope" aria-hidden="true"></i>Medical History </button>
-                            <button class="tablinks mb-3" onclick='openCity(event,"notes")'>
-                                <i class="mx-2 fa fa-book" aria-hidden="true"></i>Notes </button>
-                            <button class="tablinks mb-3" onclick='openCity(event,"reports")'>
-                                <i class="mx-2 fa fa-sticky-note" aria-hidden="true"></i>Reports </button>
-                            <button class="tablinks mb-3" onclick='openCity(event,"medications")'>
-                                <i class="mx-2 fa fa-medkit" aria-hidden="true"></i>Medications </button>
-                        </div>
-                        <div id="personalDetails" class="tabcontent">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-bordered">
-                                    <thead class="py-5">
-                                        <tr class="py-5">
-                                            <th class="py-3" scope="col">Data</th>
-                                            <th class="py-3" scope="col">Data</th>
-                                        </tr>
-                                    <tbody class="ml-3">
-                                        <tr>
-                                            <td class="pt-4">Chief Complaints:</td>
-                                            <td class="pt-4">03/18/2023 00:00:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Chief Complaints:</td>
-                                            <td class="pt-4">03/18/2023 00:00:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Chief Complaints:</td>
-                                            <td class="pt-4">03/18/2023 00:00:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Chief Complaints:</td>
-                                            <td class="pt-4">03/18/2023 00:00:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Chief Complaints:</td>
-                                            <td class="pt-4">03/18/2023 00:00:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Chief Complaints:</td>
-                                            <td class="pt-4">03/18/2023 00:00:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Symptoms:</td>
-                                            <td class="pt-4">Urgent Care Visits</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Symptoms Explanation:</td>
-                                            <td class="pt-4"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Condition:</td>
-                                            <td class="pt-4"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Additional information related to your condition:</td>
-                                            <td class="pt-4"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">Level of Pain:</td>
-                                            <td class="pt-4"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="d-flex align-items-start tabOnMob">
+                            <div class="nav flex-column nav-pills me-3 tabShowMob" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <button class="tablinks mb-3 active" id="v-pills-personal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-personal" type="button" role="tab" aria-controls="v-pills-personal" aria-selected="true"><i class="mx-2 fa fa-user" aria-hidden="true"></i>Personal
+                                    Details </button>
+                                <button class="tablinks mb-3" id="v-pills-history-tab" data-bs-toggle="pill" data-bs-target="#v-pills-history" type="button" role="tab" aria-controls="v-pills-history" aria-selected="false"> <i class="mx-2 fa fa-stethoscope" aria-hidden="true"></i>Medical History </button>
+                                <button class="tablinks mb-3" id="v-pills-notes-tab" data-bs-toggle="pill" data-bs-target="#v-pills-notes" type="button" role="tab" aria-controls="v-pills-notes" aria-selected="false"><i class="mx-2 fa fa-book" aria-hidden="true"></i>Notes</button>
+                                <button class="tablinks mb-3" id="v-pills-reports-tab" data-bs-toggle="pill" data-bs-target="#v-pills-reports" type="button" role="tab" aria-controls="v-pills-reports" aria-selected="false"><i class="mx-2 fa fa-sticky-note" aria-hidden="true"></i>Reports</button>
+                                <button class="tablinks mb-3" id="v-pills-medications-tab" data-bs-toggle="pill" data-bs-target="#v-pills-medications" type="button" role="tab" aria-controls="v-pills-medications" aria-selected="false"><i class="mx-2 fa fa-medkit" aria-hidden="true"></i>Medications</button>
                             </div>
-                        </div>
-                        <div id="MedialHistory" class="tabcontent">
-                            <div class="tabs-container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="tabs">
-                                            <li>
-                                                <button data-tab="tab1" class="tab-link current">Diagnosis</button>
-                                            </li>
-                                            <li>
-                                                <button data-tab="tab2" class="tab-link">Social</button>
-                                            </li>
-                                            <li>
-                                                <button data-tab="tab3" class="tab-link">Relative</button>
-                                            </li>
-                                            <li>
-                                                <button data-tab="tab4" class="tab-link">Medications</button>
-                                            </li>
-                                            <li>
-                                                <button data-tab="tab5" class="tab-link">Sure Script</button>
-                                            </li>
-                                        </ul>
+                            <div class="tab-content" id="v-pills-tabContent">
+
+                                <!-- ? Personal details -->
+                                <div class="tab-pane fade show active" id="v-pills-personal" role="tabpanel" aria-labelledby="v-pills-personal-tab">
+                                    <div id="personalDetails">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead class="py-5">
+                                                    <tr class="py-5">
+                                                        <th class="py-3" scope="col">Data</th>
+                                                        <th class="py-3" scope="col">Data</th>
+                                                    </tr>
+                                                <tbody class="ml-3">
+                                                    <tr>
+                                                        <td class="pt-4">Chief Complaints:</td>
+                                                        <td class="pt-4">03/18/2023 00:00:00</td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
-                                <div id="tab1" class="tab-content current">
-                                    <div class="multiDrop">
-                                        <form class="container" method="GET" id="form">
-                                            <div class="row">
-                                                <div class="col-2"></div>
-                                                <div class="col-10" id="notifications">&nbsp;</div>
+
+                                <!-- ? Medical History -->
+                                <div class="tab-pane fade" id="v-pills-history" role="tabpanel" aria-labelledby="v-pills-history-tab">
+
+                                    <div id="MedialHistory">
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="tab-link active" id="pills-diagnos-tab" data-bs-toggle="pill" data-bs-target="#pills-diagnos" type="button" role="tab" aria-controls="pills-diagnos" aria-selected="true">Diagnosis</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="tab-link" id="pills-social-tab" data-bs-toggle="pill" data-bs-target="#pills-social" type="button" role="tab" aria-controls="pills-social" aria-selected="false">Social</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="tab-link" id="pills-relative-tab" data-bs-toggle="pill" data-bs-target="#pills-relative" type="button" role="tab" aria-controls="pills-relative" aria-selected="false">Relative</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="tab-link" id="pills-medi-tab" data-bs-toggle="pill" data-bs-target="#pills-medi" type="button" role="tab" aria-controls="pills-medi" aria-selected="false">Medications</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="tab-link" id="pills-sureScript-tab" data-bs-toggle="pill" data-bs-target="#pills-sureScript" type="button" role="tab" aria-controls="pills-sureScript" aria-selected="false">Sure
+                                                    Script</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <!-- ? Diagnosis -->
+                                            <div class="tab-pane fade show active" id="pills-diagnos" role="tabpanel" aria-labelledby="pills-diagnos-tab">
+                                                <div class="multiDrop">
+                                                    <form class="container" method="GET" id="form">
+                                                        <div class="row">
+                                                            <div class="col-2"></div>
+                                                            <div class="col-10" id="notifications">&nbsp;</div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-lg-2 col-md-12 col-form-label" for="Diagnosis">Diagnosis</label>
+                                                            <div class="col-lg-10 col-md-12">
+                                                                <select multiple="multiple" name="Diagnosis" id="Diagnosis" class="filter-multi-select">
+                                                                    <option class="px-4" value="bear">Bear</option>
+                                                                    <option class="px-4" value="ant">Ant</option>
+                                                                    <option class="px-4" value="salamander">Salamander
+                                                                    </option>
+                                                                    <option class="px-4" value="owl">Owl</option>
+                                                                    <option class="px-4" value="frog">Frog</option>
+                                                                    <option class="px-4" value="shark">Shark</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="tableHead mt-3">ICD Codes</div>
+                                                <div class="row pt-4 tabRow1">
+                                                    <div class="col-md-6 mt-4 border-end d-flex">
+                                                        <span>
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </span>
+                                                        <span class="inputText">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit. Cupiditate incidunt qui commodi maiores, obcaecati
+                                                            molestias
+                                                            minima quod dolorum, voluptatum iusto ut quam saepe fugit
+                                                            voluptatibus
+                                                            velit possimus sint dolore! Temporibus.</span>
+                                                    </div>
+                                                    <div class="col-md-6 mt-4 d-flex">
+                                                        <span>
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </span>
+                                                        <span class="inputText">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit. Cupiditate incidunt qui commodi maiores, obcaecati
+                                                            molestias
+                                                            minima quod dolorum, voluptatum iusto ut quam saepe fugit
+                                                            voluptatibus
+                                                            velit possimus sint dolore! Temporibus.</span>
+                                                    </div>
+                                                    <div class="col-md-6 mt-4 d-flex">
+                                                        <span>
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </span>
+                                                        <span class="inputText">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit. Cupiditate incidunt qui commodi maiores, obcaecati
+                                                            molestias
+                                                            minima quod dolorum, voluptatum iusto ut quam saepe fugit
+                                                            voluptatibus
+                                                            velit possimus sint dolore! Temporibus.</span>
+                                                    </div>
+                                                    <div class="col-md-6 mt-4 d-flex">
+                                                        <span>
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </span>
+                                                        <span class="inputText">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit. Cupiditate incidunt qui commodi maiores, obcaecati
+                                                            molestias
+                                                            minima quod dolorum, voluptatum iusto ut quam saepe fugit
+                                                            voluptatibus
+                                                            velit possimus sint dolore! Temporibus.</span>
+                                                    </div>
+                                                    <div class="col-md-6 mt-4 d-flex">
+                                                        <span>
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </span>
+                                                        <span class="inputText">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit. Cupiditate incidunt qui commodi maiores, obcaecati
+                                                            molestias
+                                                            minima quod dolorum, voluptatum iusto ut quam saepe fugit
+                                                            voluptatibus
+                                                            velit possimus sint dolore! Temporibus.</span>
+                                                    </div>
+                                                    <div class="col-md-6 mt-4 d-flex">
+                                                        <span>
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                        </span>
+                                                        <span class="inputText">Lorem ipsum dolor sit amet consectetur
+                                                            adipisicing
+                                                            elit. Cupiditate incidunt qui commodi maiores, obcaecati
+                                                            molestias
+                                                            minima quod dolorum, voluptatum iusto ut quam saepe fugit
+                                                            voluptatibus
+                                                            velit possimus sint dolore! Temporibus.</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <div class="col-md-12">
+                                                        <div class="btn removebtn">Save</div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-2 col-md-12 col-form-label" for="Diagnosis">Diagnosis</label>
-                                                <div class="col-lg-10 col-md-12">
-                                                    <select multiple="multiple" name="Diagnosis" id="Diagnosis" class="filter-multi-select">
-                                                        <option class="px-4" value="bear">Bear</option>
-                                                        <option class="px-4" value="ant">Ant</option>
-                                                        <option class="px-4" value="salamander">Salamander</option>
-                                                        <option class="px-4" value="owl">Owl</option>
-                                                        <option class="px-4" value="frog">Frog</option>
-                                                        <option class="px-4" value="shark">Shark</option>
-                                                    </select>
+                                            <!-- ? Social -->
+
+                                            <div class="tab-pane fade" id="pills-social" role="tabpanel" aria-labelledby="pills-social-tab">
+                                                <div id="social">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover table-bordered">
+                                                            <thead class="py-5">
+                                                                <tr class="py-5">
+                                                                    <th class="py-3" scope="col">Social History</th>
+                                                                    <th class="py-3" scope="col">Data</th>
+                                                                </tr>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="pt-4">Are you a?</td>
+                                                                    <td class="pt-4">
+                                                                        <div>
+                                                                            <input class="form-check-input" type="radio" value="">
+                                                                            <span>Current Smoker</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input class="form-check-input" type="radio" value="">
+                                                                            <span>Former Smoker</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input class="form-check-input" type="radio" value="">
+                                                                            <span>Social History</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Do you drink alcohol?</td>
+                                                                    <td>
+                                                                        <div>
+                                                                            <input class="form-check-input" type="radio" value="">
+                                                                            <span>Yes</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input class="form-check-input" type="radio" value="">
+                                                                            <span>No</span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- ? Relative -->
+
+                                            <div class="tab-pane fade" id="pills-relative" role="tabpanel" aria-labelledby="pills-relative-tab">
+                                                <div id="relative">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover table-bordered">
+                                                            <thead class="py-5">
+                                                                <tr class="py-5">
+                                                                    <th class="py-3" scope="col">Has any of your
+                                                                        relatives had:</th>
+                                                                    <th class="py-3" scope="col">Data</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="pt-4">
+                                                                        <input class="form-check-input pl-1" type="checkbox" value="" onclick="toggleRowSelection(this)">
+                                                                        <span>Social History
+                                                                    </td>
+                                                                    <td class="pt-4">
+                                                                        <input type="text" class="form-control" id="exampleInput" placeholder="Enter a value" disabled="disabled">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ? medi -->
+                                            <div class="tab-pane fade" id="pills-medi" role="tabpanel" aria-labelledby="pills-medi-tab">
+                                                <div id="medi">
+                                                    <div class="tableHead">Are you on any medications?</div>
+                                                    <div class="row pt-4">
+                                                        <div class="col-md-6 mt-4 border-end">
+                                                            <div class="d-flex justify-content-around">
+                                                                <div>1. Any Medications?</div>
+                                                                <div class="d-flex">
+                                                                    <div>
+                                                                        <span>Yes</span>
+                                                                        <input class="form-check-input ms-1" type="radio" value="">
+                                                                    </div>
+                                                                    <div class="px-2">
+                                                                        <span>No</span>
+                                                                        <input class="form-check-input ms-1" type="radio" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-4">
+                                                            <div class="d-flex justify-content-around">
+                                                                <div>2. Do you have any allergies?</div>
+                                                                <div class="d-flex">
+                                                                    <div>
+                                                                        <span>Yes</span>
+                                                                        <input class="form-check-input ms-1" type="radio" value="">
+                                                                    </div>
+                                                                    <div class="px-2">
+                                                                        <span>No</span>
+                                                                        <input class="form-check-input ms-1" type="radio" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mt-4 border-top">
+                                                            <div class="mt-3 d-flex justify-content-around">
+                                                                <div>3. Please list all hospitalizations and surgeries
+                                                                </div>
+                                                                <div id="input-container">
+                                                                    <div>
+                                                                        <input type="text" name="input-field-1" placeholder="Write here">
+                                                                        <button onclick="removeInput(this)">
+                                                                            <i class="bx bx-trash"></i>Remove </button>
+                                                                    </div>
+                                                                    <button onclick="addInput()">Add Field</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-4">
+                                                            <div class="col-md-12">
+                                                                <div class="btn removebtn">Save</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ? sureScript -->
+                                            <div class="tab-pane fade" id="pills-sureScript" role="tabpanel" aria-labelledby="pills-sureScript-tab">
+                                                <div id="sureScript">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="sureScriptForm">
+                                                                    <form>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 mb-3">
+                                                                                <label class="form-label">Insurance</label>
+                                                                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Write here">
+                                                                            </div>
+                                                                            <div class="col-md-6 mb-3">
+                                                                                <label class="form-label">From
+                                                                                    Date</label>
+                                                                                <input type="text" id="datepicker" class="form-control" placeholder="Select Date Here">
+                                                                            </div>
+                                                                            <div class="col-md-6 mb-3">
+                                                                                <label class="form-label">To
+                                                                                    Date</label>
+                                                                                <input type="text" id="datepicker" class="form-control" placeholder="Select Date Here">
+                                                                            </div>
+                                                                        </div>
+                                                                        <button type="submit" class="btn removebtn">Submit</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Notes -->
+                                <div class="tab-pane fade" id="v-pills-notes" role="tabpanel" aria-labelledby="v-pills-notes-tab">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="tab-link active" id="pills-encounter-tab" data-bs-toggle="pill" data-bs-target="#pills-encounter" type="button" role="tab" aria-controls="pills-encounter" aria-selected="true">Encounter</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="tab-link" id="pills-soap-tab" data-bs-toggle="pill" data-bs-target="#pills-soap" type="button" role="tab" aria-controls="pills-soap" aria-selected="false">Soap</button>
+                                        </li>
+
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+
+                                        <!-- ? Encounters -->
+                                        <div class="tab-pane fade show active" id="pills-encounter" role="tabpanel" aria-labelledby="pills-encounter-tab">
+                                            <div id="encounterNotes">
+
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="py-5">
+                                                            <tr class="py-5">
+                                                                <th class="py-3 fw-normal" scope="col">Notes by</th>
+                                                                <th class="py-3 fw-normal" scope="col">Patient</th>
+                                                                <th class="py-3 fw-normal" scope="col">Call Start Time
+                                                                </th>
+                                                                <th class="py-3 fw-normal" scope="col">Call End Time
+                                                                </th>
+                                                                <th class="py-3 fw-normal" scope="col">Duration</th>
+                                                                <th class="py-3 fw-normal" scope="col">Forward</th>
+                                                            </tr>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pt-4">Dr. Ken West</td>
+                                                                <td class="pt-4">Kharofk Wasilk</td>
+                                                                <td class="pt-4">Kharofk Wasilk</td>
+                                                                <td class="pt-4">09:32:11</td>
+                                                                <td class="pt-4">00:00:22</td>
+                                                                <td class="pt-4">
+                                                                    <span class="forwareToPatient">
+                                                                        <i class="bx bxs-send px-1"></i>Forward to
+                                                                        Patient
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ? Soap -->
+                                        <div class="tab-pane fade" id="pills-soap" role="tabpanel" aria-labelledby="pills-soap-tab">
+                                            <div id="soap">
+                                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="tab-link active" id="pills-subjective-tab" data-bs-toggle="pill" data-bs-target="#pills-subjective" type="button" role="tab" aria-controls="pills-subjective" aria-selected="true">Subjective</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="tab-link" id="pills-objective-tab" data-bs-toggle="pill" data-bs-target="#pills-objective" type="button" role="tab" aria-controls="pills-objective" aria-selected="false">Objective</button>
+                                                    </li>
+
+                                                </ul>
+                                                <div class="tab-content" id="pills-tabContent">
+                                                    <div class="tab-pane fade show active" id="pills-subjective" role="tabpanel" aria-labelledby="pills-subjective-tab">
+                                                        subjective
+                                                    </div>
+                                                    <div class="tab-pane fade show " id="pills-objective" role="tabpanel" aria-labelledby="pills-objective-tab">
+                                                        objective
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Reports -->
+                                <div class="tab-pane fade" id="v-pills-reports" role="tabpanel" aria-labelledby="v-pills-reports-tab">
+
+                                    <div id="reports" class="tabcontent">
+                                        <form class="container">
+                                            <div class="row">
+                                                <div class=" multiDrop">
+                                                    <div class="col-lg-5">
+
+                                                        <input type="text" class="form-control" placeholder="Enter folder name">
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>
-                                    </div>
-                                    <div class="tableHead mt-3">ICD Codes</div>
-                                    <div class="row pt-4 tabRow1">
-                                        <div class="col-md-6 mt-4 border-end d-flex">
-                                            <span>
-                                                <input class="form-check-input" type="checkbox" value="">
-                                            </span>
-                                            <span class="inputText">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Cupiditate incidunt qui commodi maiores, obcaecati molestias
-                                                minima quod dolorum, voluptatum iusto ut quam saepe fugit voluptatibus
-                                                velit possimus sint dolore! Temporibus.</span>
-                                        </div>
-                                        <div class="col-md-6 mt-4 d-flex">
-                                            <span>
-                                                <input class="form-check-input" type="checkbox" value="">
-                                            </span>
-                                            <span class="inputText">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Cupiditate incidunt qui commodi maiores, obcaecati molestias
-                                                minima quod dolorum, voluptatum iusto ut quam saepe fugit voluptatibus
-                                                velit possimus sint dolore! Temporibus.</span>
-                                        </div>
-                                        <div class="col-md-6 mt-4 d-flex">
-                                            <span>
-                                                <input class="form-check-input" type="checkbox" value="">
-                                            </span>
-                                            <span class="inputText">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Cupiditate incidunt qui commodi maiores, obcaecati molestias
-                                                minima quod dolorum, voluptatum iusto ut quam saepe fugit voluptatibus
-                                                velit possimus sint dolore! Temporibus.</span>
-                                        </div>
-                                        <div class="col-md-6 mt-4 d-flex">
-                                            <span>
-                                                <input class="form-check-input" type="checkbox" value="">
-                                            </span>
-                                            <span class="inputText">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Cupiditate incidunt qui commodi maiores, obcaecati molestias
-                                                minima quod dolorum, voluptatum iusto ut quam saepe fugit voluptatibus
-                                                velit possimus sint dolore! Temporibus.</span>
-                                        </div>
-                                        <div class="col-md-6 mt-4 d-flex">
-                                            <span>
-                                                <input class="form-check-input" type="checkbox" value="">
-                                            </span>
-                                            <span class="inputText">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Cupiditate incidunt qui commodi maiores, obcaecati molestias
-                                                minima quod dolorum, voluptatum iusto ut quam saepe fugit voluptatibus
-                                                velit possimus sint dolore! Temporibus.</span>
-                                        </div>
-                                        <div class="col-md-6 mt-4 d-flex">
-                                            <span>
-                                                <input class="form-check-input" type="checkbox" value="">
-                                            </span>
-                                            <span class="inputText">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Cupiditate incidunt qui commodi maiores, obcaecati molestias
-                                                minima quod dolorum, voluptatum iusto ut quam saepe fugit voluptatibus
-                                                velit possimus sint dolore! Temporibus.</span>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-md-12">
-                                            <div class="btn btn-primary">Save</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab2" class="tab-content">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-bordered">
-                                            <thead class="py-5">
-                                                <tr class="py-5">
-                                                    <th class="py-3" scope="col">Social History</th>
-                                                    <th class="py-3" scope="col">Data</th>
-                                                </tr>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="pt-4">Are you a?</td>
-                                                    <td class="pt-4">
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Current Smoker</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Former Smoker</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Social History</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Do you drink alcohol?</td>
-                                                    <td>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>Yes</span>
-                                                        </div>
-                                                        <div>
-                                                            <input class="form-check-input" type="radio" value="">
-                                                            <span>No</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div id="tab3" class="tab-content">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-bordered">
-                                            <thead class="py-5">
-                                                <tr class="py-5">
-                                                    <th class="py-3" scope="col">Has any of your relatives had:</th>
-                                                    <th class="py-3" scope="col">Data</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="pt-4">
-                                                        <input class="form-check-input pl-1" type="checkbox" value="" onclick="toggleRowSelection(this)">
-                                                        <span>Social History
-                                                    </td>
-                                                    <td class="pt-4">
-                                                        <input type="text" class="form-control" id="exampleInput" placeholder="Enter a value" disabled="disabled">
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div id="tab4" class="tab-content">
-                                    <div class="tableHead">Are you on any medications?</div>
-                                    <div class="row pt-4">
-                                        <div class="col-md-6 mt-4 border-end">
-                                            <div class="d-flex justify-content-around">
-                                                <div>1. Any Medications?</div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <span>Yes</span>
-                                                        <input class="form-check-input ms-1" type="radio" value="">
-                                                    </div>
-                                                    <div class="px-2">
-                                                        <span>No</span>
-                                                        <input class="form-check-input ms-1" type="radio" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mt-4">
-                                            <div class="d-flex justify-content-around">
-                                                <div>2. Do you have any allergies?</div>
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <span>Yes</span>
-                                                        <input class="form-check-input ms-1" type="radio" value="">
-                                                    </div>
-                                                    <div class="px-2">
-                                                        <span>No</span>
-                                                        <input class="form-check-input ms-1" type="radio" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 mt-4 border-top">
-                                            <div class="mt-3 d-flex justify-content-around">
-                                                <div>3. Please list all hospitalizations and surgeries</div>
-                                                <div id="input-container">
-                                                    <div>
-                                                        <input type="text" name="input-field-1" placeholder="Write here">
-                                                        <button onclick="removeInput(this)">
-                                                            <i class="bx bx-trash"></i>Remove </button>
-                                                    </div>
-                                                    <button onclick="addInput()">Add Field</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-md-12">
-                                            <div class="btn btn-primary">Save</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab5" class="tab-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="sureScriptForm">
-                                                    <form>
-                                                        <div class="row">
-                                                            <div class="col-md-12 mb-3">
-                                                                <label class="form-label">Insurance</label>
-                                                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Write here">
-                                                            </div>
-                                                            <div class="col-md-6 mb-3">
-                                                                <label class="form-label">From Date</label>
-                                                                <input type="text" id="datepicker" class="form-control" placeholder="Select Date Here">
-                                                            </div>
-                                                            <div class="col-md-6 mb-3">
-                                                                <label class="form-label">To Date</label>
-                                                                <input type="text" id="datepicker" class="form-control" placeholder="Select Date Here">
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="notes" class="tabcontent">
-                            <div class="tabs-container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="tabs">
-                                            <li>
-                                                <button data-tab="encounterNotes" class="tab-link current">Encounter
-                                                    Notes</button>
-                                            </li>
-                                            <li>
-                                                <button data-tab="soapNotes" class="tab-link">Soap Notes</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="encounterNotes" class="tab-content current">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-bordered">
-                                            <thead class="py-5">
-                                                <tr class="py-5">
-                                                    <th class="py-3 fw-normal" scope="col">Notes by</th>
-                                                    <th class="py-3 fw-normal" scope="col">Patient</th>
-                                                    <th class="py-3 fw-normal" scope="col">Call Start Time</th>
-                                                    <th class="py-3 fw-normal" scope="col">Call End Time</th>
-                                                    <th class="py-3 fw-normal" scope="col">Duration</th>
-                                                    <th class="py-3 fw-normal" scope="col">Forward</th>
-                                                </tr>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="pt-4">Dr. Ken West</td>
-                                                    <td class="pt-4">Kharofk Wasilk</td>
-                                                    <td class="pt-4">Kharofk Wasilk</td>
-                                                    <td class="pt-4">09:32:11</td>
-                                                    <td class="pt-4">00:00:22</td>
-                                                    <td class="pt-4">
-                                                        <span class="forwareToPatient">
-                                                            <i class="bx bxs-send"></i>Forward to Patient </span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div id="soapNotes" class="tab-content">
-                                    <div class="tabs-container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <ul class="tabs">
-                                                    <li>
-                                                        <button data-tab="subjective" class="tab-link current">Subjective</button>
-                                                    </li>
-                                                    <li>
-                                                        <button data-tab="tab2" class="tab-link">Objective</button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div id="subjective" class="tab-content current">
-                                            <div class="row pt-4 tabRow1">
-                                                <div class="col-md-6 mt-4 border-end d-flex">
-                                                    <span>
-                                                        <input class="form-check-input" type="checkbox" value="">
-                                                    </span>
-                                                    <span class="inputText">Lorem ipsum dolor sit amet consectetur
-                                                        adipisicing elit. Cupiditate incidunt qui commodi maiores,
-                                                        obcaecati molestias minima quod dolorum, voluptatum iusto ut
-                                                        quam saepe fugit voluptatibus velit possimus sint dolore!
-                                                        Temporibus.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="reports" class="tabcontent">
-                            <form class="container">
-                                <div class="row">
-                                    <div class=" multiDrop">
-                                        <div class="col-lg-5">
+                                        <div class="table-responsive mt-2">
+                                            <table class="table table-hover table-bordered">
+                                                <thead class="py-5">
+                                                    <tr class="py-5">
+                                                        <th class="py-3" scope="col">Name</th>
+                                                        <th class="py-3" scope="col">Kind</th>
+                                                    </tr>
+                                                <tbody class="ml-3">
+                                                    <tr>
+                                                        <td class="pt-4">...</td>
+                                                        <td class="pt-4">...</td>
+                                                    </tr>
 
-                                            <input type="text" class="form-control" placeholder="Enter folder name">
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                            <div class="table-responsive mt-2">
-                                <table class="table table-hover table-bordered">
-                                    <thead class="py-5">
-                                        <tr class="py-5">
-                                            <th class="py-3" scope="col">Name</th>
-                                            <th class="py-3" scope="col">Kind</th>
-                                        </tr>
-                                    <tbody class="ml-3">
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div id="medications" class="tabcontent">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-bordered">
-                                    <thead class="py-5">
-                                        <tr class="py-5">
-                                            <th class="py-3" scope="col">Vitals</th>
-                                            <th class="py-3" scope="col">Diagnosis</th>
-                                            <th class="py-3" scope="col">Treatment</th>
-                                        </tr>
-                                    <tbody class="ml-3">
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                            <td class="pt-4">...</td>
-                                        </tr>
+                                <!-- Medications -->
+                                <div class="tab-pane fade" id="v-pills-medications" role="tabpanel" aria-labelledby="v-pills-medications-tab">
 
-                                    </tbody>
-                                </table>
+                                    <div id="medications" class="tabcontent">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered">
+                                                <thead class="py-5">
+                                                    <tr class="py-5">
+                                                        <th class="py-3" scope="col">Vitals</th>
+                                                        <th class="py-3" scope="col">Diagnosis</th>
+                                                        <th class="py-3" scope="col">Treatment</th>
+                                                    </tr>
+                                                <tbody class="ml-3">
+                                                    <tr>
+                                                        <td class="pt-4">...</td>
+                                                        <td class="pt-4">...</td>
+                                                        <td class="pt-4">...</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pt-4">...</td>
+                                                        <td class="pt-4">...</td>
+                                                        <td class="pt-4">...</td>
+                                                    </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -711,36 +540,20 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
+
+
 <script>
-    // tabs
-    document.addEventListener("DOMContentLoaded", function() {
-        const tabLinks = document.querySelectorAll(".tab-link");
-        const tabContents = document.querySelectorAll(".tab-content");
-        tabLinks.forEach(function(tabLink) {
-            tabLink.addEventListener("click", function() {
-                const tabId = this.getAttribute("data-tab");
-                // Remove 'current' class from all tabs and tab contents
-                tabLinks.forEach(function(link) {
-                    link.classList.remove("current");
-                });
-                tabContents.forEach(function(content) {
-                    content.classList.remove("current");
-                });
-                // Add 'current' class to the clicked tab and corresponding tab content
-                this.classList.add("current");
-                document.getElementById(tabId).classList.add("current");
-            });
-        });
-    });
-</script>
-<script>
+    // ? JS for whole select row selected 
     function toggleRowSelection(e) {
         var t = e.closest("tr"),
             n = t.querySelector('input[type="text"]');
         e.checked ? (t.classList.add("selected-row"), n.disabled = !1) : (t.classList.remove("selected-row"), n.disabled = !
             0)
     }
+
+    //  ? JS for dynamic input field add or remove
     var counter = 1;
 
     function addInput() {
@@ -749,7 +562,7 @@
             t = document.createElement("input");
         t.type = "text", t.name = "input-field-" + counter, t.placeholder = "write here";
         var n = document.createElement("button");
-        n.innerHTML = ' < i class = "bx bx-trash" > < /i> Remove', n.onclick = function() {
+        n.innerHTML = ' < i class = "bx bx-trash" > <script /i> Remove', n.onclick = function() {
             removeInput(this)
         };
         var r = document.createElement("div");
@@ -760,4 +573,5 @@
         var t = e.parentNode;
         t.parentNode.removeChild(t)
     }
-</script> <?php include('./includes/footer.php') ?>
+</script>
+<?php include('./includes/footer.php') ?>
