@@ -864,8 +864,9 @@ tbody tr {
 }
 #personalDetails .table-responsive,
 #tab2 .table-responsive,
-#encounterNotes .table-responsive,#reports .table-responsive,
- #medications .table-responsive{
+#encounterNotes .table-responsive,
+#reports .table-responsive,
+#medications .table-responsive {
   height: 400px !important;
   overflow-y: auto;
 }
@@ -878,7 +879,7 @@ tbody tr {
 #tab2 .table-responsive::-webkit-scrollbar,
 #encounterNotes .table-responsive::-webkit-scrollbar,
 #reports .table-responsive::-webkit-scrollbar,
-#medications .table-responsive::-webkit-scrollbar  {
+#medications .table-responsive::-webkit-scrollbar {
   width: 10px;
   background-color: var(--icon-bg) !important;
   border-radius: 10px;
@@ -887,7 +888,7 @@ tbody tr {
 #tab1 .tabRow1::-webkit-scrollbar-thumb,
 #tab2 .table-responsive::-webkit-scrollbar-thumb,
 #encounterNotes .table-responsive::-webkit-scrollbar-thumb,
-#reports .table-responsive::-webkit-scrollbar-thumb ,
+#reports .table-responsive::-webkit-scrollbar-thumb,
 #medications .table-responsive::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
@@ -978,7 +979,7 @@ tbody tr {
 .instantConn {
   background-color: white;
   width: 100%;
-  height: 500px;
+  height: 100%;
   border-radius: 10px;
   padding: 70px;
   box-shadow: 0 0 15px #7777;
@@ -986,7 +987,17 @@ tbody tr {
   justify-content: center;
   /* align-items: center; */
 }
+.instantForm {
+  background-color: rgb(245, 245, 245);
 
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 70px;
+  box-shadow: 0 0 15px #7777;
+  display: flex;
+  justify-content: center;
+}
 .wave-group {
   position: relative;
 }
@@ -1282,7 +1293,7 @@ tbody tr {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   margin: 0 auto;
   box-shadow: 0 0 15px #9d9d9d77;
   /* text-align: center; */
@@ -1363,23 +1374,22 @@ tbody tr {
   }
 }
 
-
 /* ? ==== Tablet  Responsive ======= */
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
   .sidebar--cus.close ~ .home {
     width: 100%;
     left: 0;
   }
-  
+
   .sidebar--cus.close {
     width: 0px;
   }
-  .tab button{
+  .tab button {
     font-weight: 400;
     padding: 15px 20px;
     font-size: 14px;
   }
-  .tab{
+  .tab {
     width: 30%;
   }
 }

@@ -157,11 +157,9 @@
                                                 <div class="col-10" id="notifications">&nbsp;</div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="col-lg-2 col-md-12 col-form-label"
-                                                    for="Diagnosis">Diagnosis</label>
+                                                <label class="col-lg-2 col-md-12 col-form-label" for="Diagnosis">Diagnosis</label>
                                                 <div class="col-lg-10 col-md-12">
-                                                    <select multiple="multiple" name="Diagnosis" id="Diagnosis"
-                                                        class="filter-multi-select">
+                                                    <select multiple="multiple" name="Diagnosis" id="Diagnosis" class="filter-multi-select">
                                                         <option class="px-4" value="bear">Bear</option>
                                                         <option class="px-4" value="ant">Ant</option>
                                                         <option class="px-4" value="salamander">Salamander</option>
@@ -369,13 +367,11 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="pt-4">
-                                                        <input class="form-check-input pl-1" type="checkbox" value=""
-                                                            onclick="toggleRowSelection(this)">
+                                                        <input class="form-check-input pl-1" type="checkbox" value="" onclick="toggleRowSelection(this)">
                                                         <span>Social History
                                                     </td>
                                                     <td class="pt-4">
-                                                        <input type="text" class="form-control" id="exampleInput"
-                                                            placeholder="Enter a value" disabled="disabled">
+                                                        <input type="text" class="form-control" id="exampleInput" placeholder="Enter a value" disabled="disabled">
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -420,8 +416,7 @@
                                                 <div>3. Please list all hospitalizations and surgeries</div>
                                                 <div id="input-container">
                                                     <div>
-                                                        <input type="text" name="input-field-1"
-                                                            placeholder="Write here">
+                                                        <input type="text" name="input-field-1" placeholder="Write here">
                                                         <button onclick="removeInput(this)">
                                                             <i class="bx bx-trash"></i>Remove </button>
                                                     </div>
@@ -445,19 +440,15 @@
                                                         <div class="row">
                                                             <div class="col-md-12 mb-3">
                                                                 <label class="form-label">Insurance</label>
-                                                                <input type="email" class="form-control"
-                                                                    aria-describedby="emailHelp"
-                                                                    placeholder="Write here">
+                                                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Write here">
                                                             </div>
                                                             <div class="col-md-6 mb-3">
                                                                 <label class="form-label">From Date</label>
-                                                                <input type="text" id="datepicker" class="form-control"
-                                                                    placeholder="Select Date Here">
+                                                                <input type="text" id="datepicker" class="form-control" placeholder="Select Date Here">
                                                             </div>
                                                             <div class="col-md-6 mb-3">
                                                                 <label class="form-label">To Date</label>
-                                                                <input type="text" id="datepicker" class="form-control"
-                                                                    placeholder="Select Date Here">
+                                                                <input type="text" id="datepicker" class="form-control" placeholder="Select Date Here">
                                                             </div>
                                                         </div>
                                                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -518,8 +509,7 @@
                                             <div class="col-md-12">
                                                 <ul class="tabs">
                                                     <li>
-                                                        <button data-tab="subjective"
-                                                            class="tab-link current">Subjective</button>
+                                                        <button data-tab="subjective" class="tab-link current">Subjective</button>
                                                     </li>
                                                     <li>
                                                         <button data-tab="tab2" class="tab-link">Objective</button>
@@ -723,51 +713,51 @@
     </div>
 </section>
 <script>
-// tabs
-document.addEventListener("DOMContentLoaded", function() {
-    const tabLinks = document.querySelectorAll(".tab-link");
-    const tabContents = document.querySelectorAll(".tab-content");
-    tabLinks.forEach(function(tabLink) {
-        tabLink.addEventListener("click", function() {
-            const tabId = this.getAttribute("data-tab");
-            // Remove 'current' class from all tabs and tab contents
-            tabLinks.forEach(function(link) {
-                link.classList.remove("current");
+    // tabs
+    document.addEventListener("DOMContentLoaded", function() {
+        const tabLinks = document.querySelectorAll(".tab-link");
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabLinks.forEach(function(tabLink) {
+            tabLink.addEventListener("click", function() {
+                const tabId = this.getAttribute("data-tab");
+                // Remove 'current' class from all tabs and tab contents
+                tabLinks.forEach(function(link) {
+                    link.classList.remove("current");
+                });
+                tabContents.forEach(function(content) {
+                    content.classList.remove("current");
+                });
+                // Add 'current' class to the clicked tab and corresponding tab content
+                this.classList.add("current");
+                document.getElementById(tabId).classList.add("current");
             });
-            tabContents.forEach(function(content) {
-                content.classList.remove("current");
-            });
-            // Add 'current' class to the clicked tab and corresponding tab content
-            this.classList.add("current");
-            document.getElementById(tabId).classList.add("current");
         });
     });
-});
 </script>
 <script>
-function toggleRowSelection(e) {
-    var t = e.closest("tr"),
-        n = t.querySelector('input[type="text"]');
-    e.checked ? (t.classList.add("selected-row"), n.disabled = !1) : (t.classList.remove("selected-row"), n.disabled = !
-        0)
-}
-var counter = 1;
+    function toggleRowSelection(e) {
+        var t = e.closest("tr"),
+            n = t.querySelector('input[type="text"]');
+        e.checked ? (t.classList.add("selected-row"), n.disabled = !1) : (t.classList.remove("selected-row"), n.disabled = !
+            0)
+    }
+    var counter = 1;
 
-function addInput() {
-    counter++;
-    var e = document.getElementById("input-container"),
-        t = document.createElement("input");
-    t.type = "text", t.name = "input-field-" + counter, t.placeholder = "write here";
-    var n = document.createElement("button");
-    n.innerHTML = ' < i class = "bx bx-trash" > < /i> Remove', n.onclick = function() {
-        removeInput(this)
-    };
-    var r = document.createElement("div");
-    r.appendChild(t), r.appendChild(n), e.insertBefore(r, e.firstChild)
-}
+    function addInput() {
+        counter++;
+        var e = document.getElementById("input-container"),
+            t = document.createElement("input");
+        t.type = "text", t.name = "input-field-" + counter, t.placeholder = "write here";
+        var n = document.createElement("button");
+        n.innerHTML = ' < i class = "bx bx-trash" > < /i> Remove', n.onclick = function() {
+            removeInput(this)
+        };
+        var r = document.createElement("div");
+        r.appendChild(t), r.appendChild(n), e.insertBefore(r, e.firstChild)
+    }
 
-function removeInput(e) {
-    var t = e.parentNode;
-    t.parentNode.removeChild(t)
-}
+    function removeInput(e) {
+        var t = e.parentNode;
+        t.parentNode.removeChild(t)
+    }
 </script> <?php include('./includes/footer.php') ?>

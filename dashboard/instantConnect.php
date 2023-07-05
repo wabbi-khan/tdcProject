@@ -10,57 +10,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
                     <div class="instantConn">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="wave-group">
-                                    <input required="" type="text" class="input">
-                                    <span class="bar"></span>
-                                    <label class="label">
-                                        <span class="label-char" style="--index: 0">N</span>
-                                        <span class="label-char" style="--index: 1">a</span>
-                                        <span class="label-char" style="--index: 2">m</span>
-                                        <span class="label-char" style="--index: 3">e</span>
-                                    </label>
+                            <div class="col-md-12">
+                                <div class="instantForm">
+                                    <div class="d-flex">
+                                        <div class="col-md-6">
+                                            <div class="wave-group">
+                                                <input required="" type="text" class="input">
+                                                <span class="bar"></span>
+                                                <label class="label">
+                                                    <span class="label-char" style="--index: 0">N</span>
+                                                    <span class="label-char" style="--index: 1">a</span>
+                                                    <span class="label-char" style="--index: 2">m</span>
+                                                    <span class="label-char" style="--index: 3">e</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="wave-group">
+                                                <input required="" type="text" class="input">
+                                                <span class="bar"></span>
+                                                <label class="label">
+                                                    <span class="label-char" style="--index: 0">N</span>
+                                                    <span class="label-char" style="--index: 1">a</span>
+                                                    <span class="label-char" style="--index: 2">m</span>
+                                                    <span class="label-char" style="--index: 3">e</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="wave-group">
-                                    <input required="" type="text" class="input">
-                                    <span class="bar"></span>
-                                    <label class="label">
-                                        <span class="label-char" style="--index: 0">N</span>
-                                        <span class="label-char" style="--index: 1">a</span>
-                                        <span class="label-char" style="--index: 2">m</span>
-                                        <span class="label-char" style="--index: 3">e</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="wave-group">
-                                    <input required="" type="text" class="input">
-                                    <span class="bar"></span>
-                                    <label class="label">
-                                        <span class="label-char" style="--index: 0">N</span>
-                                        <span class="label-char" style="--index: 1">a</span>
-                                        <span class="label-char" style="--index: 2">m</span>
-                                        <span class="label-char" style="--index: 3">e</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="wave-group">
-                                    <input required="" type="text" class="input">
-                                    <span class="bar"></span>
-                                    <label class="label">
-                                        <span class="label-char" style="--index: 0">N</span>
-                                        <span class="label-char" style="--index: 1">a</span>
-                                        <span class="label-char" style="--index: 2">m</span>
-                                        <span class="label-char" style="--index: 3">e</span>
-                                    </label>
-                                </div>
-                            </div>
+
+
                         </div>
 
                     </div>
