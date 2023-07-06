@@ -15,6 +15,12 @@
                         <option value="3">Three</option>
                     </select>
                 </div>
+                <div class="col-md-10">
+                    <div class="search float-end">
+                        <input placeholder="Search..." type="text">
+                        <button type="submit">Go</button>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="table-responsive">

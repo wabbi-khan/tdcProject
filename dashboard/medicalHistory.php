@@ -417,9 +417,6 @@
                                   <div class="row">
                                     <div class="table-responsive">
                                       <table class="table table-hover custom-table table-bordered">
-                                        <!-- <thead class="py-5"><tr class="py-5"><th class="py-3" scope="col">
-                                                                                            Data</th><th class="py-3" scope="col">
-                                                                                            Data</th></tr></thead> -->
                                         <tbody class="ml-3">
                                           <tr>
                                             <th class="w-50 pt-4">Chief Complaints:</th>
@@ -453,9 +450,6 @@
                                     <div class="table-responsive">
                                       <div class="tableHead mt-3">Medical History </div>
                                       <table class="table table-hover custom-table table-bordered">
-                                        <!-- <thead class="py-5"><tr class="py-5"><th class="py-3" scope="col">
-                                                                                            Data</th><th class="py-3" scope="col">
-                                                                                            Data</th></tr></thead> -->
                                         <tbody class="ml-3">
                                           <tr>
                                             <th class="w-50 pt-4">Medical: </th>
