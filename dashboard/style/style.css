@@ -839,7 +839,7 @@ body.dark .home .text {
 #social .table-responsive::-webkit-scrollbar,#relative .table-responsive::-webkit-scrollbar,
 #encounterNotes .table-responsive::-webkit-scrollbar,
 #reports .table-responsive::-webkit-scrollbar,
-#medications .table-responsive::-webkit-scrollbar {
+#medications .table-responsive::-webkit-scrollbar,.mainDiv::-webkit-scrollbar {
   width: 10px;
   background-color: var(--icon-bg) !important;
   border-radius: 10px;
@@ -849,7 +849,8 @@ body.dark .home .text {
 #social .table-responsive::-webkit-scrollbar-thumb,#relative .table-responsive::-webkit-scrollbar-thumb,
 #encounterNotes .table-responsive::-webkit-scrollbar-thumb,
 #reports .table-responsive::-webkit-scrollbar-thumb,
-#medications .table-responsive::-webkit-scrollbar-thumb {
+#medications .table-responsive::-webkit-scrollbar-thumb,
+.mainDiv::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
 }
@@ -923,6 +924,13 @@ body.dark .home .text {
 
 
 /* ? ===== My Schedule ====== */
+.mySchedule {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+
+}
 .mySchedule .timePicker {
   padding: 2px 10px;
   border-radius: 5px;
@@ -936,97 +944,131 @@ body.dark .home .text {
 }
 
 /* ? ==== Instant Connect ======= */
-.instantConn {
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  padding: 70px;
-  box-shadow: 0 0 15px #7777;
-  display: flex;
+.form-bg{
+  display: grid;
   justify-content: center;
-  /* align-items: center; */
+  
 }
-.instantForm {
-  background-color: rgb(245, 245, 245);
-
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  padding: 70px;
-  box-shadow: 0 0 15px #7777;
+.form-container{
+  background: linear-gradient(var(--primary-color),var(--primary-color));
+  font-size: 0;
+  width: 950px;
+  /* height: 400px; */
+  padding: 0 15px;
+  /* border: 1px solid #DC2036; */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
-.wave-group {
-  position: relative;
-}
-
-.wave-group .input {
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 150px;
-  border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
-}
-
-.wave-group .input:focus {
-  outline: none;
-}
-
-.wave-group .label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  display: flex;
-}
-
-.wave-group .label-char {
-  transition: 0.2s ease all;
-  transition-delay: calc(var(--index) * 0.05s);
-}
-
-.wave-group .input:focus ~ label .label-char,
-.wave-group .input:valid ~ label .label-char {
-  transform: translateY(-20px);
-  font-size: 14px;
-  color: var(--primary-color);
-}
-
-.wave-group .bar {
-  position: relative;
-  display: block;
-  width: 150px;
-}
-
-.wave-group .bar:before,
-.wave-group .bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: var(--primary-color);
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-
-.wave-group .bar:before {
-  left: 50%;
-}
-
-.wave-group .bar:after {
-  right: 50%;
-}
-
-.wave-group .input:focus ~ .bar:before,
-.wave-group .input:focus ~ .bar:after {
+.form-container .form-icon{
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(0,0,0,0.2);
   width: 50%;
+  padding: 100px 0;
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 auto;
+}
+.form-container .form-icon i{
+  font-size: 124px;
+  margin: 0 0 15px;
+  display: block;
+}
+.form-container .form-icon .signup a{
+  color: #fff;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+.form-container .form-icon .signup a:hover{ text-decoration: underline; }
+.form-container .form-horizontal{
+  background: rgba(255,255,255,0.99);
+  width: 50%;
+  padding: 115px 30px;
+  margin: -20px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+.form-container .title{
+  color: #454545;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin: 0 0 30px 0;
+}
+.form-horizontal .form-group{
+  background-color: rgba(255,255,255,0.15);
+  margin: 0 0 15px;
+  border: 1px solid #b5b5b5;
+  border-radius: 20px;
+}
+.form-horizontal .input-icon{
+  color: #b5b5b5;
+  font-size: 15px;
+  text-align: center;
+  line-height: 38px;
+  height: 35px;
+  width: 40px;
+  vertical-align: top;
+  display: inline-block;
+}
+.form-horizontal .form-control{
+  color: #b5b5b5;
+  background-color: transparent;
+  font-size: 14px;
+  letter-spacing: 1px;
+  width: calc(100% - 55px);
+  height: 33px;
+  padding: 2px 10px 0 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.form-horizontal .form-control:focus{
+  box-shadow: none;
+  border: none;
+}
+.form-horizontal .form-control::placeholder{
+  color: #b5b5b5;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.form-horizontal .btn{
+  color: var(--primary-color);
+  background: var(--icon-bg);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  margin: 0 0 10px 0;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.form-horizontal .btn:hover,
+.form-horizontal .btn:focus{
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.form-horizontal .forgot-pass{
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+.form-horizontal .forgot-pass a{
+  color: #999;
+  transition: all 0.3s ease;
+}
+.form-horizontal .forgot-pass a:hover{
+  color: #777;
+  text-decoration: underline;
 }
 
 /* ? ===== Multple select fiels ==== */
@@ -1309,16 +1351,104 @@ body.dark .home .text {
   font-weight: 600;
 }
 
-/* .formField{
-  color: var(--primary-color);
-  font-size: 18px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.formAns{
-  font-size: 15px;
-} */
+/* ? ====== App Invitaion screen ===== */
 
+.left-box{
+  background-color: var(--icon-bg);
+}
+.box-area{
+  width: 1200px;
+}
+/*------------ Right box ------------*/
+.right-box{
+  padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+  font-size: 16px;
+}
+.rounded-4{
+  border-radius: 20px;
+}
+.rounded-5{
+  border-radius: 30px;
+}
+
+.appLinks form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.mainDiv{
+  height: 400px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.appLinks img{
+  width: 25px;
+}
+.appLinks span{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.appLinks label {
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+}
+
+.appLinks  label input {
+  position: absolute;
+  left: -9999px;
+}
+
+.appLinks label input:checked + span {
+  background-color: var(--primary-color);
+  color: white;
+
+}
+
+.appLinks label input:checked + span:before {
+  box-shadow: inset 0 0 0 0.4375em var(--primary-color);
+}
+
+.appLinks label span {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+  color: var(--primary-color);
+  padding: 10px 10px;
+
+}
+
+.appLinks label span:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.appLinks label span:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em #00005c;
+}
 /* ? ==== Mobile  Responsive ======= */
 @media only screen and (max-width: 600px) {
   .topHeader {
@@ -1400,6 +1530,18 @@ body.dark .home .text {
     text-align: center;
   }
 }
+@media only screen and (max-width:576px){
+  .form-container{ padding-bottom: 15px; width: 100%;}
+  .form-container .form-icon{
+      width: 100%;
+      padding: 20px 0;
+  }
+  .form-container .form-horizontal{
+      width: 100%;
+      margin: 0;
+  }
+}
+
 
 /* ? ==== Tablet  Responsive ======= */
 @media only screen and (max-width: 900px) {
@@ -1428,3 +1570,20 @@ body.dark .home .text {
   }
   
 }
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+  .box-area{
+   height: 100%;
+     margin: 0 10px;
+  }
+  .left-box{
+     height: 100%;
+     overflow: hidden;
+  }
+  .right-box{
+     padding: 20px;
+  }
+  
+}
+
+
