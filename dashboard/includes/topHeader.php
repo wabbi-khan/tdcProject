@@ -1,10 +1,63 @@
 <div class="dektopIcons">
     <div class="allmesages">
-        <div class="bell">
+        <div class="bell" id="showbox">
             <i class="bx bx-bell"></i>
             <span>2</span>
         </div>
-        <div class="showMes"></div>
+        <div class="showMes hidden" id="myDiv">
+        <section class="section-50">
+    <div class="container">
+        <div class="notification-ui_dd-content">
+            <div class="notification-list notification-list--unread">
+                <div class="notification-list_content">
+                    <div class="notification-list_img">
+                        <img src="./assets/images.png" alt="user">
+                    </div>
+                    <div class="notification-list_detail">
+                        <p><b>John Doe</b></p>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, dolorem.</p>
+                        <p class="text-muted"><small>10 mins ago</small></p>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div> 
+        <div class="notification-ui_dd-content">
+            <div class="notification-list notification-list--unread">
+                <div class="notification-list_content">
+                    <div class="notification-list_img">
+                        <img src="./assets/images.png" alt="user">
+                    </div>
+                    <div class="notification-list_detail">
+                        <p><b>John Doe</b></p>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, dolorem.</p>
+                        <p class="text-muted"><small>10 mins ago</small></p>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div> 
+        <div class="notification-ui_dd-content">
+            <div class="notification-list notification-list--unread">
+                <div class="notification-list_content">
+                    <div class="notification-list_img">
+                        <img src="./assets/images.png" alt="user">
+                    </div>
+                    <div class="notification-list_detail">
+                        <p><b>John Doe</b></p>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, dolorem.</p>
+                        <p class="text-muted"><small>10 mins ago</small></p>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+</section>
+        </div>
     </div>
     <div class="bell pencil">
         <i class="bx bx-pencil"></i>
@@ -40,3 +93,13 @@
         </ul>
     </div>
 </div>
+
+<script>
+    const showbox = document.getElementById("showbox");
+const myDiv = document.getElementById("myDiv");
+
+showbox.addEventListener("click", () => {
+  myDiv.classList.toggle("hidden");
+});
+
+</script>

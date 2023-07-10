@@ -28,7 +28,7 @@
                                     <span class="input-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
                                     <input class="form-control" type="text" placeholder="Phone no">
                                 </div>
-                                <button class="btn signin">Login</button>
+                                <button class="btn signin">Submit</button>
                             </form>
                         </div>
                     </div>

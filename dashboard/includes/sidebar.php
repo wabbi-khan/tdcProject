@@ -71,7 +71,7 @@
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/docTodoc.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Doc to Doc</span>
                 </a>

@@ -498,17 +498,13 @@ body.dark .home .text {
   height: 150px;
   border-radius: 5px;
   background-color: var(--icon-bg);
-  transition: opacity 0.4s ease;
-  /* opacity: 0; */
-  /* display: none; */
-  visibility: hidden;
+  overflow-x: auto;
+  box-shadow: 0 0 15px #7777;
 }
-.bell:hover + .showMes {
-  display: block !important;
-  /* opacity: 1; */
-  visibility: visible;
-  /* display: block; */
+.showMes.hidden {
+  display: none;
 }
+
 .box--wrap2 {
   display: flex;
   justify-content: center;
@@ -617,7 +613,7 @@ body.dark .home .text {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-  white-space: nowrap
+  white-space: nowrap;
 }
 .removebtn {
   padding: 10px 20px;
@@ -688,9 +684,6 @@ body.dark .home .text {
 
 /* ? =======Medical History ======== */
 
-
-
-
 .profileCard {
   background-color: white;
   width: 100%;
@@ -734,8 +727,6 @@ body.dark .home .text {
 }
 /* ? Tabs */
 
-
-
 /* Style the buttons inside the tab */
 .tablinks {
   color: var(--primary-color);
@@ -776,7 +767,6 @@ body.dark .home .text {
   border-radius: 10px !important;
 }
 
-
 /* Sub tabs */
 .tab-link {
   cursor: pointer;
@@ -809,12 +799,12 @@ body.dark .home .text {
   transform: rotate(180deg);
 }
 
-
-.tab-content{
-  width:100%;
+.tab-content {
+  width: 100%;
 }
 #personalDetails .table-responsive,
-#social .table-responsive,#relative .table-responsive,
+#social .table-responsive,
+#relative .table-responsive,
 #encounterNotes .table-responsive,
 #reports .table-responsive,
 #medications .table-responsive {
@@ -825,7 +815,7 @@ body.dark .home .text {
   height: 350px;
   overflow-y: auto;
 }
-#MedialHistory ul{
+#MedialHistory ul {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -836,26 +826,32 @@ body.dark .home .text {
 
 #personalDetails .table-responsive::-webkit-scrollbar,
 #MedialHistory .tabRow1::-webkit-scrollbar,
-#social .table-responsive::-webkit-scrollbar,#relative .table-responsive::-webkit-scrollbar,
+#social .table-responsive::-webkit-scrollbar,
+#relative .table-responsive::-webkit-scrollbar,
 #encounterNotes .table-responsive::-webkit-scrollbar,
 #reports .table-responsive::-webkit-scrollbar,
-#medications .table-responsive::-webkit-scrollbar,.mainDiv::-webkit-scrollbar {
+#medications .table-responsive::-webkit-scrollbar,
+.mainDiv::-webkit-scrollbar,
+.showMes::-webkit-scrollbar {
   width: 10px;
   background-color: var(--icon-bg) !important;
   border-radius: 10px;
 }
 #personalDetails .table-responsive::-webkit-scrollbar-thumb,
 #MedialHistory .tabRow1::-webkit-scrollbar-thumb,
-#social .table-responsive::-webkit-scrollbar-thumb,#relative .table-responsive::-webkit-scrollbar-thumb,
+#social .table-responsive::-webkit-scrollbar-thumb,
+#relative .table-responsive::-webkit-scrollbar-thumb,
 #encounterNotes .table-responsive::-webkit-scrollbar-thumb,
 #reports .table-responsive::-webkit-scrollbar-thumb,
 #medications .table-responsive::-webkit-scrollbar-thumb,
-.mainDiv::-webkit-scrollbar-thumb {
+.mainDiv::-webkit-scrollbar-thumb,
+.showMes::-webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 10px;
 }
 #MedialHistory .tableHead,
-#medi .tableHead, .soapBox .tableHead {
+#medi .tableHead,
+.soapBox .tableHead {
   background-color: var(--primary-color);
   width: 100%;
   /* height: 40px; */
@@ -911,7 +907,7 @@ body.dark .home .text {
   border-radius: 5px;
   font-size: 15px;
 }
-.medicalDetails .tabShowMob{
+.medicalDetails .tabShowMob {
   width: 30%;
 }
 .sureScriptForm {
@@ -922,14 +918,12 @@ body.dark .home .text {
   padding: 20px;
 }
 
-
 /* ? ===== My Schedule ====== */
 .mySchedule {
   background-color: white;
   width: 100%;
   height: 100%;
   border-radius: 5px;
-
 }
 .mySchedule .timePicker {
   padding: 2px 10px;
@@ -944,53 +938,54 @@ body.dark .home .text {
 }
 
 /* ? ==== Instant Connect ======= */
-.form-bg{
+.form-bg {
   display: grid;
   justify-content: center;
-  
 }
-.form-container{
-  background: linear-gradient(var(--primary-color),var(--primary-color));
+.form-container {
+  background: linear-gradient(var(--primary-color), var(--primary-color));
   font-size: 0;
   width: 950px;
   /* height: 400px; */
   padding: 0 15px;
   /* border: 1px solid #DC2036; */
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-.form-container .form-icon{
+.form-container .form-icon {
   color: #fff;
   font-size: 13px;
   text-align: center;
-  text-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   width: 50%;
   padding: 100px 0;
   vertical-align: top;
   display: inline-block;
   margin: 0 auto;
 }
-.form-container .form-icon i{
+.form-container .form-icon i {
   font-size: 124px;
   margin: 0 0 15px;
   display: block;
 }
-.form-container .form-icon .signup a{
+.form-container .form-icon .signup a {
   color: #fff;
   text-transform: capitalize;
   transition: all 0.3s ease;
 }
-.form-container .form-icon .signup a:hover{ text-decoration: underline; }
-.form-container .form-horizontal{
-  background: rgba(255,255,255,0.99);
+.form-container .form-icon .signup a:hover {
+  text-decoration: underline;
+}
+.form-container .form-horizontal {
+  background: rgba(255, 255, 255, 0.99);
   width: 50%;
   padding: 115px 30px;
   margin: -20px 0;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   display: inline-block;
 }
-.form-container .title{
+.form-container .title {
   color: #454545;
   font-size: 23px;
   font-weight: 600;
@@ -999,13 +994,13 @@ body.dark .home .text {
   letter-spacing: 0.5px;
   margin: 0 0 30px 0;
 }
-.form-horizontal .form-group{
-  background-color: rgba(255,255,255,0.15);
+.form-horizontal .form-group {
+  background-color: rgba(255, 255, 255, 0.15);
   margin: 0 0 15px;
   border: 1px solid #b5b5b5;
   border-radius: 20px;
 }
-.form-horizontal .input-icon{
+.form-horizontal .input-icon {
   color: #b5b5b5;
   font-size: 15px;
   text-align: center;
@@ -1015,7 +1010,7 @@ body.dark .home .text {
   vertical-align: top;
   display: inline-block;
 }
-.form-horizontal .form-control{
+.form-horizontal .form-control {
   color: #b5b5b5;
   background-color: transparent;
   font-size: 14px;
@@ -1029,16 +1024,16 @@ body.dark .home .text {
   display: inline-block;
   transition: all 0.3s;
 }
-.form-horizontal .form-control:focus{
+.form-horizontal .form-control:focus {
   box-shadow: none;
   border: none;
 }
-.form-horizontal .form-control::placeholder{
+.form-horizontal .form-control::placeholder {
   color: #b5b5b5;
   font-size: 13px;
   text-transform: capitalize;
 }
-.form-horizontal .btn{
+.form-horizontal .btn {
   color: var(--primary-color);
   background: var(--icon-bg);
   font-size: 15px;
@@ -1052,21 +1047,21 @@ body.dark .home .text {
   transition: all 0.3s ease;
 }
 .form-horizontal .btn:hover,
-.form-horizontal .btn:focus{
+.form-horizontal .btn:focus {
   color: #fff;
   background-color: var(--primary-color);
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.form-horizontal .forgot-pass{
+.form-horizontal .forgot-pass {
   font-size: 12px;
   text-align: center;
   display: block;
 }
-.form-horizontal .forgot-pass a{
+.form-horizontal .forgot-pass a {
   color: #999;
   transition: all 0.3s ease;
 }
-.form-horizontal .forgot-pass a:hover{
+.form-horizontal .forgot-pass a:hover {
   color: #777;
   text-decoration: underline;
 }
@@ -1331,7 +1326,7 @@ body.dark .home .text {
   position: absolute;
   top: 0;
   right: 0;
-  transition: .9s ease;
+  transition: 0.9s ease;
 }
 
 .search button[type="submit"]:hover {
@@ -1340,12 +1335,12 @@ body.dark .home .text {
   background-color: var(--primary-color);
 }
 
-.soapBox{
+.soapBox {
   background-color: rgb(245, 245, 245);
   width: 100%;
   height: 100%;
 }
-.custom-table th{
+.custom-table th {
   color: var(--primary-color);
   font-size: 16px;
   font-weight: 600;
@@ -1353,24 +1348,24 @@ body.dark .home .text {
 
 /* ? ====== App Invitaion screen ===== */
 
-.left-box{
+.left-box {
   background-color: var(--icon-bg);
 }
-.box-area{
+.box-area {
   width: 1200px;
 }
 /*------------ Right box ------------*/
-.right-box{
+.right-box {
   padding: 40px 30px 40px 40px;
 }
 /*------------ Custom Placeholder ------------*/
-::placeholder{
+::placeholder {
   font-size: 16px;
 }
-.rounded-4{
+.rounded-4 {
   border-radius: 20px;
 }
-.rounded-5{
+.rounded-5 {
   border-radius: 30px;
 }
 
@@ -1379,23 +1374,21 @@ body.dark .home .text {
   flex-wrap: wrap;
   flex-direction: column;
 }
-.mainDiv{
+.mainDiv {
   height: 400px !important;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.appLinks img{
-  width: 25px;
+.appLinks img {
+  width: 45px;
 }
-.appLinks span{
+.appLinks span {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .appLinks label {
   display: flex;
@@ -1406,7 +1399,7 @@ body.dark .home .text {
   margin-bottom: 0.375em;
 }
 
-.appLinks  label input {
+.appLinks label input {
   position: absolute;
   left: -9999px;
 }
@@ -1414,7 +1407,6 @@ body.dark .home .text {
 .appLinks label input:checked + span {
   background-color: var(--primary-color);
   color: white;
-
 }
 
 .appLinks label input:checked + span:before {
@@ -1429,7 +1421,6 @@ body.dark .home .text {
   transition: 0.25s ease;
   color: var(--primary-color);
   padding: 10px 10px;
-
 }
 
 .appLinks label span:hover {
@@ -1506,15 +1497,16 @@ body.dark .home .text {
     height: 100% !important;
     padding: 15px;
   }
-  .medicalDetails .tabOnMob{
+  .medicalDetails .tabOnMob {
     width: 100%;
-  } .medicalDetails .tabOnMob{
+  }
+  .medicalDetails .tabOnMob {
     flex-direction: column;
   }
-  .medicalDetails .nav-pills{
+  .medicalDetails .nav-pills {
     width: 100%;
   }
-  #MedialHistory ul{
+  #MedialHistory ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1529,19 +1521,38 @@ body.dark .home .text {
     padding-bottom: 20px;
     text-align: center;
   }
-}
-@media only screen and (max-width:576px){
-  .form-container{ padding-bottom: 15px; width: 100%;}
-  .form-container .form-icon{
-      width: 100%;
-      padding: 20px 0;
+  .search input[type="text"] {
+    width: 280px;
+    margin-bottom: 20px;
   }
-  .form-container .form-horizontal{
-      width: 100%;
-      margin: 0;
+  .datePicker button {
+    padding: 5px;
+  }
+  .datePicker input {
+    padding: 10px;
+  }
+  .mySchedule .timePicker {
+    width: 100px;
+  }
+  .mySchedule td div {
+    display: flex;
+    gap: 10px;
   }
 }
-
+@media only screen and (max-width: 576px) {
+  .form-container {
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .form-container .form-icon {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .form-container .form-horizontal {
+    width: 100%;
+    margin: 0;
+  }
+}
 
 /* ? ==== Tablet  Responsive ======= */
 @media only screen and (max-width: 900px) {
@@ -1553,37 +1564,89 @@ body.dark .home .text {
   .sidebar--cus.close {
     width: 0px;
   }
-  .medicalDetails .tabOnMob{
+  .medicalDetails .tabOnMob {
     width: 100%;
-  } .medicalDetails .tabOnMob{
+  }
+  .medicalDetails .tabOnMob {
     flex-direction: column;
   }
-  .medicalDetails .nav-pills{
+  .medicalDetails .nav-pills {
     width: 100%;
   }
-  #MedialHistory ul{
+  #MedialHistory ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 15px;
   }
-  
 }
 /*------------ For small screens------------*/
-@media only screen and (max-width: 768px){
-  .box-area{
-   height: 100%;
-     margin: 0 10px;
+@media only screen and (max-width: 768px) {
+  .box-area {
+    height: 100%;
+    margin: 0 10px;
   }
-  .left-box{
-     height: 100%;
-     overflow: hidden;
+  .left-box {
+    height: 100%;
+    overflow: hidden;
   }
-  .right-box{
-     padding: 20px;
+  .right-box {
+    padding: 20px;
   }
-  
 }
 
+/* =================== */
 
+.notification-ui_dd-content {
+  margin-bottom: 5px;
+}
+
+.notification-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 7px;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.notification-list--unread {
+  border-left: 2px solid #29b6f6;
+}
+
+.notification-list .notification-list_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.notification-list .notification-list_content .notification-list_img img {
+  height: 45px;
+  width: 45px;
+  border: 3px solid var(--primary-color);
+  padding: 2px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.notification-list .notification-list_content .notification-list_detail p {
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.notification-list_detail p b {
+  font-size: 12px;
+}
+.notification-list_detail .text-muted {
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}

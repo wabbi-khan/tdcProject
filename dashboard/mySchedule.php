@@ -25,9 +25,9 @@
                                     <thead class="py-5">
                                         <tr class="py-5">
                                             <th>#</th>
-                                            <th class="py-3" scope="col">Day</th>
-                                            <th class="py-3" scope="col">Morning</th>
-                                            <th class="py-3" scope="col">Evening</th>
+                                            <th class="py-3" >Day</th>
+                                            <th class="py-3" >Morning</th>
+                                            <th class="py-3" >Evening</th>
                                         </tr>
                                     </thead>
                                     <tbody class="text-center">
@@ -35,33 +35,43 @@
                                             <td>
                                                 <input class="form-check-input wholeselect mx-1" type="checkbox" value="" />
                                             </td>
-                                            <td scope="row">
+                                            <td >
                                                 Monday
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                <div>
+                                                    <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-
                                                 <input class="form-check-input wholeselect mx-1" type="checkbox" value="" />
                                             </td>
-                                            <td scope="row">
+                                            <td >
                                                 Tuesday
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -69,16 +79,22 @@
 
                                                 <input class="form-check-input wholeselect mx-1" type="checkbox" value="" />
                                             </td>
-                                            <td scope="row">
+                                            <td >
                                                 Wednesday
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -86,16 +102,22 @@
 
                                                 <input class="form-check-input wholeselect mx-1" type="checkbox" value="" />
                                             </td>
-                                            <td scope="row">
+                                            <td >
                                                 Thursday
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -103,32 +125,44 @@
 
                                                 <input class="form-check-input wholeselect mx-1" type="checkbox" value="" />
                                             </td>
-                                            <td scope="row">
+                                            <td >
                                                 Friday
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <input class="form-check-input wholeselect mx-1" type="checkbox" value="" />
                                             </td>
-                                            <td scope="row">
+                                            <td >
                                                 Saturday
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 morningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker morningtime" id="morningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                             <td>
-                                                <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
-                                                <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                <div>
+
+                                                    <input class="form-check-input mx-1 mt-2 eveningselect" type="checkbox" value="" />
+                                                    <input type="text" class="form-control timePicker eveningtime" id="eveningtime1" disabled placeholder="Select time here" />
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
