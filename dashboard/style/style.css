@@ -529,11 +529,6 @@ body.dark .home .text {
   margin-bottom: 4px;
 }
 
-.card1 i {
-  font-size: 40px;
-  color: #505050;
-}
-
 .go-corner {
   display: flex;
   align-items: center;
@@ -593,10 +588,14 @@ body.dark .home .text {
 .card1:hover:before {
   transform: scale(28);
 }
+.card1 svg {
+  width: 50px;
+  fill: var(--primary-color);
+}
 
-.card1:hover i {
+.card1:hover svg {
   transition: all 0.3s ease-out;
-  color: #ffffff;
+  fill: white;
 }
 .card1:hover h3 {
   transition: all 0.3s ease-out;
