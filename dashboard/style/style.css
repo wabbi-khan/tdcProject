@@ -495,7 +495,7 @@ body.dark .home .text {
   top: 50px;
   right: 15%;
   width: 400px;
-  height: 150px;
+  height: 200px;
   border-radius: 5px;
   background-color: var(--icon-bg);
   overflow-x: auto;
@@ -1608,7 +1608,7 @@ body.dark .home .text {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 7px;
   background: #fff;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
@@ -1623,11 +1623,13 @@ body.dark .home .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .notification-list .notification-list_content .notification-list_img img {
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   border: 3px solid var(--primary-color);
   padding: 2px;
   object-fit: cover;
@@ -1648,4 +1650,8 @@ body.dark .home .text {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 10px;
+}
+.notification-list_detail small {
+  font-weight: bold;
+  color: #212529;
 }
