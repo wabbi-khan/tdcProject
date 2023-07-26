@@ -77,13 +77,13 @@
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/messages.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Messages</span>
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/callHistory.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Call History</span>
                 </a>
@@ -107,13 +107,13 @@
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/support.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Support</span>
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/profile.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Profile</span>
                 </a>

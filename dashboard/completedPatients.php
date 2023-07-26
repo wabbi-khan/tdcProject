@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-bordered">
                         <thead class="py-5">
                             <tr class="py-5">
                                 <th class="py-3" scope="col">#</th>
@@ -39,11 +39,11 @@
                                 <td class="pt-4">
                                     <img src="./assets/video-camera.png" alt="video call">
                                 </td>
-                                <td class="pt-4">
-                                    <a href="#" class="removebtn text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="">Patient Care
+                                <td class="pt-4 d-flex justify-content-center align-items-center">
+                                    <a href="#" class="removebtn text-decoration-none d-flex justify-content-center align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span>Patient Care
+                                            </span>
                                             <i class="bx bx-chevron-down" id="icon"></i>
-                                        </span>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="/">Encounter Notes</a></li>
