@@ -8,7 +8,7 @@
        <div class="docTodoc">
         <div class="container">
             <div class="table-responsive">
-                         <table class="table table-hover table-bordered">
+                         <table class="table table-bordered">
                              <thead class="py-5">
                                  <tr class="py-5">
                                      <th class="py-3" scope="col">Name</th>
@@ -30,9 +30,9 @@
                                             <i class="bx bx-chevron-down" id="icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="/">Encounter Notes</a></li>
+                                        <li><a class="dropdown-item" href="#">Video Call</a></li>
                                         <hr class="dropdown-divider" />
-                                        <li><a class="dropdown-item" href="/TDCPROJECT/dashboard/medicalHistory.php">Medical History</a>
+                                        <li><a class="dropdown-item" href="#">Messages</a>
                                         </li>
                                     </ul>
                                 </td>
@@ -50,9 +50,9 @@
                                             <i class="bx bx-chevron-down" id="icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="/">Encounter Notes</a></li>
+                                        <li><a class="dropdown-item" href="#">Video Call</a></li>
                                         <hr class="dropdown-divider" />
-                                        <li><a class="dropdown-item" href="/TDCPROJECT/dashboard/medicalHistory.php">Medical History</a>
+                                        <li><a class="dropdown-item" href="#">Messages</a>
                                         </li>
                                     </ul>
                                 </td>

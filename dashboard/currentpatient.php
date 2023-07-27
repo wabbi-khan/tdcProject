@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="table-responsive">
-                    <table class="table table-hover">
+                    <table class="table table-bordered">
                         <thead class="py-5">
                             <tr class="py-5 text-nowrap">
                                 <th class="py-3" scope="col">#</th>

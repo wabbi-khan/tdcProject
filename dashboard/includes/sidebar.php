@@ -72,49 +72,58 @@
             </li>
             <li class="nav-link--cus">
                 <a href="/TDCPROJECT/dashboard/docTodoc.php">
-                    <i class="bx bx-wallet icon"></i>
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                    <i class="fa-solid fa-user-doctor icon"></i>
                     <span class="text nav-text">Doc to Doc</span>
                 </a>
             </li>
             <li class="nav-link--cus">
                 <a href="/TDCPROJECT/dashboard/messages.php">
-                    <i class="bx bx-wallet icon"></i>
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+        <i class="bx bx-envelope icon"></i>
+
                     <span class="text nav-text">Messages</span>
                 </a>
             </li>
             <li class="nav-link--cus">
                 <a href="/TDCPROJECT/dashboard/callHistory.php">
-                    <i class="bx bx-wallet icon"></i>
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                        <!-- <i class="fa-solid fa-phone icon"></i> -->
+                        <i class='bx bx-phone-call icon'></i>
                     <span class="text nav-text">Call History</span>
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
-                    <i class="bx bx-wallet icon"></i>
+                <a href="/TDCPROJECT/dashboard/prescriptions.php">
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                    <i class='bx bxs-capsule icon' ></i>
                     <span class="text nav-text">Prescriptions</span>
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
+                <a href="/TDCPROJECT/dashboard/refillRequests.php">
                     <i class="bx bx-wallet icon"></i>
                     <span class="text nav-text">Refill Requests</span>
                 </a>
             </li>
             <li class="nav-link--cus">
-                <a href="#">
-                    <i class="bx bx-wallet icon"></i>
+                <a href="/TDCPROJECT/dashboard/labs.php">
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                    <i class='bx bxs-flask icon' ></i>
                     <span class="text nav-text">Labs</span>
                 </a>
             </li>
             <li class="nav-link--cus">
                 <a href="/TDCPROJECT/dashboard/support.php">
-                    <i class="bx bx-wallet icon"></i>
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                    <i class="fa-solid fa-people-group icon"></i>
                     <span class="text nav-text">Support</span>
                 </a>
             </li>
             <li class="nav-link--cus">
                 <a href="/TDCPROJECT/dashboard/profile.php">
-                    <i class="bx bx-wallet icon"></i>
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                    <i class='bx bx-user-circle icon' ></i>
                     <span class="text nav-text">Profile</span>
                 </a>
             </li>

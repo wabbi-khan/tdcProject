@@ -14,7 +14,9 @@ body {
   transition: var(--tran-05);
   overflow-x: hidden;
 }
-
+a {
+  text-decoration: none;
+}
 ::selection {
   background-color: var(--primary-color);
   color: #fff;
@@ -248,14 +250,6 @@ body.dark .sidebar--cus li a:hover .text {
   opacity: 0;
 }
 
-body.dark .mode .sun-moon i.sun {
-  opacity: 1;
-}
-
-body.dark .mode .sun-moon i.moon {
-  opacity: 0;
-}
-
 .menu-bar .bottom-content .toggle-switch {
   position: absolute;
   right: 0;
@@ -433,7 +427,7 @@ body.dark .home .text {
   border-bottom: 0.3em solid;
 }
 
-/* ? Desktop icons */
+/* ? Top header */
 .topHeader {
   background-color: white;
   width: 100%;
@@ -503,6 +497,66 @@ body.dark .home .text {
 }
 .showMes.hidden {
   display: none;
+}
+/* =================== */
+
+.notification-ui_dd-content {
+  margin-bottom: 5px;
+}
+
+.notification-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 7px;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.notification-list--unread {
+  border-left: 2px solid #29b6f6;
+}
+
+.notification-list .notification-list_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-list .notification-list_content .notification-list_img img {
+  height: 35px;
+  width: 35px;
+  border: 3px solid var(--primary-color);
+  padding: 2px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.notification-list .notification-list_content .notification-list_detail p {
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.notification-list_detail p b {
+  font-size: 12px;
+}
+.notification-list_detail .text-muted {
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}
+.notification-list_detail small {
+  font-weight: bold;
+  color: #212529;
 }
 
 .box--wrap2 {
@@ -815,10 +869,6 @@ body.dark .home .text {
   overflow-y: auto;
 }
 #MedialHistory ul {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 15px;
 }
@@ -831,7 +881,11 @@ body.dark .home .text {
 #reports .table-responsive::-webkit-scrollbar,
 #medications .table-responsive::-webkit-scrollbar,
 .mainDiv::-webkit-scrollbar,
-.showMes::-webkit-scrollbar,
+.showMes::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--icon-bg) !important;
+  border-radius: 10px;
+}
 #personalDetails .table-responsive::-webkit-scrollbar-thumb,
 #MedialHistory .tabRow1::-webkit-scrollbar-thumb,
 #social .table-responsive::-webkit-scrollbar-thumb,
@@ -1304,12 +1358,12 @@ body.dark .home .text {
   border: none;
 }
 
-.search {
+#soap .search {
   display: inline-block;
   position: relative;
 }
 
-.search input[type="text"] {
+#soap .search input[type="text"] {
   width: 500px;
   padding: 10px;
   border: none;
@@ -1317,11 +1371,11 @@ body.dark .home .text {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.search input[type="text"]:focus {
+#soap .search input[type="text"]:focus {
   outline: none;
 }
 
-.search button[type="submit"] {
+#soap .search button[type="submit"] {
   background-color: var(--icon-bg);
   border: none;
   color: var(--primary-color);
@@ -1335,7 +1389,7 @@ body.dark .home .text {
   transition: 0.9s ease;
 }
 
-.search button[type="submit"]:hover {
+#soap .search button[type="submit"]:hover {
   transform: scale(1.1);
   color: white;
   background-color: var(--primary-color);
@@ -1446,224 +1500,8 @@ body.dark .home .text {
   transition: 0.25s ease;
   box-shadow: inset 0 0 0 0.125em #00005c;
 }
-/* ? ==== Mobile  Responsive ======= */
-@media only screen and (max-width: 600px) {
-  .topHeader {
-    padding: 20px;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .topHeader .icons {
-    display: block;
-  }
-  .topHeader .dektopIcons {
-    display: none;
-  }
-  .topHeader h2 {
-    font-size: 20px;
-    align-items: center;
-    font-size: 14px !important;
-  }
-  .padd-wrap {
-    padding: 10px;
-    margin-left: 30px;
-  }
-  .box--wrap {
-    width: 100%;
-    height: 150px;
-    padding: 0 20px;
-  }
-  .box--wrap span {
-    font-size: 10px;
-    white-space: nowrap;
-  }
-  .box--wrap img {
-    width: 40px;
-    height: 40px;
-  }
-  .sidebar--cus.close + .home {
-    filter: blur(0px);
-  }
-  .sidebar--cus + .home {
-    filter: blur(10px);
-  }
 
-  thead {
-    font-size: 13px;
-  }
-  .customModal {
-    width: 300px;
-    margin-left: 100px;
-  }
-
-  .sidebar--cus.close {
-    width: 0px;
-  }
-  .medicalDetails {
-    height: 100% !important;
-    padding: 15px;
-  }
-  .medicalDetails .tabOnMob {
-    width: 100%;
-  }
-  .medicalDetails .tabOnMob {
-    flex-direction: column;
-  }
-  .medicalDetails .nav-pills {
-    width: 100%;
-  }
-  #MedialHistory ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 15px;
-  }
-  .sidebar--cus.close ~ .home {
-    width: 100%;
-    left: 0;
-  }
-  .multiDrop {
-    padding-bottom: 20px;
-    text-align: center;
-  }
-  .search input[type="text"] {
-    width: 280px;
-    margin-bottom: 20px;
-  }
-  .datePicker button {
-    padding: 5px;
-  }
-  .datePicker input {
-    padding: 10px;
-  }
-  .mySchedule .timePicker {
-    width: 100px;
-  }
-  .mySchedule td div {
-    display: flex;
-    gap: 10px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .form-container {
-    padding-bottom: 15px;
-    width: 100%;
-  }
-  .form-container .form-icon {
-    width: 100%;
-    padding: 20px 0;
-  }
-  .form-container .form-horizontal {
-    width: 100%;
-    margin: 0;
-  }
-}
-
-/* ? ==== Tablet  Responsive ======= */
-@media only screen and (max-width: 900px) {
-  .sidebar--cus.close ~ .home {
-    width: 100%;
-    left: 0;
-  }
-
-  .sidebar--cus.close {
-    width: 0px;
-  }
-  .medicalDetails .tabOnMob {
-    width: 100%;
-  }
-  .medicalDetails .tabOnMob {
-    flex-direction: column;
-  }
-  .medicalDetails .nav-pills {
-    width: 100%;
-  }
-  #MedialHistory ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 15px;
-  }
-}
-/*------------ For small screens------------*/
-@media only screen and (max-width: 768px) {
-  .box-area {
-    height: 100%;
-    margin: 0 10px;
-  }
-  .left-box {
-    height: 100%;
-    overflow: hidden;
-  }
-  .right-box {
-    padding: 20px;
-  }
-}
-
-/* =================== */
-
-.notification-ui_dd-content {
-  margin-bottom: 5px;
-}
-
-.notification-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 7px;
-  background: #fff;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-}
-
-.notification-list--unread {
-  border-left: 2px solid #29b6f6;
-}
-
-.notification-list .notification-list_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.notification-list .notification-list_content .notification-list_img img {
-  height: 35px;
-  width: 35px;
-  border: 3px solid var(--primary-color);
-  padding: 2px;
-  object-fit: cover;
-  border-radius: 50px;
-  margin-right: 20px;
-}
-
-.notification-list .notification-list_content .notification-list_detail p {
-  margin-bottom: 5px;
-  line-height: 1.2;
-}
-.notification-list_detail p b {
-  font-size: 12px;
-}
-.notification-list_detail .text-muted {
-  white-space: nowrap;
-  width: 250px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 10px;
-}
-.notification-list_detail small {
-  font-weight: bold;
-  color: #212529;
-}
-
-/* ===========  */
+/* ? ===== Chat Box / Messages =====  */
 .chat {
   margin-top: auto;
   margin-bottom: auto;
@@ -1692,13 +1530,13 @@ body.dark .home .text {
 .container {
   align-content: center;
 }
-.search {
+.contacts_card .search {
   border-radius: 15px 0 0 15px !important;
   background-color: rgba(0, 0, 0, 0.3) !important;
   border: 0 !important;
   color: white !important;
 }
-.search:focus {
+.contacts_card .search:focus {
   box-shadow: none !important;
   outline: 0px !important;
 }
@@ -1746,7 +1584,7 @@ body.dark .home .text {
   padding: 5px 10px;
   margin-bottom: 15px !important;
 }
-.active {
+.contacts .active {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .user_img {
@@ -1879,10 +1717,162 @@ body.dark .home .text {
 .hidden {
   display: none;
 }
-@media (max-width: 576px) {
+/* ? ==== Mobile  Responsive ======= */
+@media only screen and (max-width: 600px) {
+  .topHeader {
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .topHeader .icons {
+    display: block;
+  }
+  .topHeader .dektopIcons {
+    display: none;
+  }
+  .topHeader h2 {
+    font-size: 20px;
+    align-items: center;
+    font-size: 14px !important;
+  }
+  .padd-wrap {
+    padding: 10px;
+    margin-left: 30px;
+  }
+  .box--wrap {
+    width: 100%;
+    height: 150px;
+    padding: 0 20px;
+  }
+  .box--wrap span {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .box--wrap img {
+    width: 40px;
+    height: 40px;
+  }
+  .sidebar--cus.close + .home {
+    filter: blur(0px);
+  }
+  .sidebar--cus + .home {
+    filter: blur(10px);
+  }
+
+  thead {
+    font-size: 13px;
+  }
+  .customModal {
+    width: 300px;
+    margin-left: 100px;
+  }
+
+  .sidebar--cus.close {
+    width: 0px;
+  }
+  .medicalDetails {
+    height: 100% !important;
+    padding: 15px;
+  }
+  .medicalDetails .tabOnMob {
+    width: 100%;
+  }
+  .medicalDetails .tabOnMob {
+    flex-direction: column;
+  }
+  .medicalDetails .nav-pills {
+    width: 100%;
+  }
+  #MedialHistory ul {
+    overflow-x: auto;
+    padding-bottom: 15px;
+  }
+  .sidebar--cus.close ~ .home {
+    width: 100%;
+    left: 0;
+  }
+  .multiDrop {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .search input[type="text"] {
+    width: 280px;
+    margin-bottom: 20px;
+  }
+  .datePicker button {
+    padding: 5px;
+  }
+  .datePicker input {
+    padding: 10px;
+  }
+  .mySchedule .timePicker {
+    width: 100px;
+  }
+  .mySchedule td div {
+    display: flex;
+    gap: 10px;
+  }
   .contacts_card {
     margin-bottom: 15px !important;
   }
 }
+@media only screen and (max-width: 576px) {
+  .form-container {
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .form-container .form-icon {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .form-container .form-horizontal {
+    width: 100%;
+    margin: 0;
+  }
+}
 
-/* ======= */
+/* ? ==== Tablet  Responsive ======= */
+@media only screen and (max-width: 900px) {
+  .sidebar--cus.close ~ .home {
+    width: 100%;
+    left: 0;
+  }
+
+  .sidebar--cus.close {
+    width: 0px;
+  }
+  .medicalDetails .tabOnMob {
+    width: 100%;
+  }
+  .medicalDetails .tabOnMob {
+    flex-direction: column;
+  }
+  .medicalDetails .nav-pills {
+    width: 100%;
+  }
+  #MedialHistory ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+  }
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px) {
+  .box-area {
+    height: 100%;
+    margin: 0 10px;
+  }
+  .left-box {
+    height: 100%;
+    overflow: hidden;
+  }
+  .right-box {
+    padding: 20px;
+  }
+}
+
+table thead tr th {
+  width: 16%;
+}

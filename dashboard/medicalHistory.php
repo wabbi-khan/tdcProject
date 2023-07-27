@@ -75,7 +75,7 @@
                 <div class="tab-pane fade show active" id="v-pills-personal" role="tabpanel" aria-labelledby="v-pills-personal-tab">
                   <div id="personalDetails">
                     <div class="table-responsive">
-                      <table class="table table-hover table-bordered">
+                      <table class="table table-bordered">
                         <thead class="py-5">
                           <tr class="py-5">
                             <th class="py-3" scope="col">Data</th>
@@ -185,7 +185,7 @@
                       <div class="tab-pane fade" id="pills-social" role="tabpanel" aria-labelledby="pills-social-tab">
                         <div id="social">
                           <div class="table-responsive">
-                            <table class="table table-hover table-bordered">
+                            <table class="table table-bordered">
                               <thead class="py-5">
                                 <tr class="py-5">
                                   <th class="py-3" scope="col">Social History</th>
@@ -232,7 +232,7 @@
                       <div class="tab-pane fade" id="pills-relative" role="tabpanel" aria-labelledby="pills-relative-tab">
                         <div id="relative">
                           <div class="table-responsive">
-                            <table class="table table-hover table-bordered">
+                            <table class="table table-bordered">
                               <thead class="py-5">
                                 <tr class="py-5">
                                   <th class="py-3" scope="col">Has any of your relatives had:</th>
@@ -358,7 +358,7 @@
                     <div class="tab-pane fade show active" id="pills-encounter" role="tabpanel" aria-labelledby="pills-encounter-tab">
                       <div id="encounterNotes">
                         <div class="table-responsive">
-                          <table class="table table-hover table-bordered">
+                          <table class="table table-bordered">
                             <thead class="py-5">
                               <tr class="py-5">
                                 <th class="py-3 fw-normal" scope="col">Notes by</th>
@@ -406,7 +406,7 @@
                               <button class="tab-link" id="pills-assessment-tab" data-bs-toggle="pill" data-bs-target="#pills-assessment" type="button" role="tab" aria-controls="pills-assessment" aria-selected="false">Assessment</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="tab-link" id="pills-plan-tab" data-bs-toggle="pill" data-bs-target="#pills-plan" type="button" role="tab" aria-controls="pills-plan" aria-selected="false">Plav</button>
+                              <button class="tab-link" id="pills-plan-tab" data-bs-toggle="pill" data-bs-target="#pills-plan" type="button" role="tab" aria-controls="pills-plan" aria-selected="false">Plan</button>
                             </li>
                           </ul>
                           <div class="tab-content" id="pills-tabContent">
@@ -416,7 +416,7 @@
                                 <div class="container">
                                   <div class="row">
                                     <div class="table-responsive">
-                                      <table class="table table-hover custom-table table-bordered">
+                                      <table class="table custom-table table-bordered">
                                         <tbody class="ml-3">
                                           <tr>
                                             <th class="w-50 pt-4">Chief Complaints:</th>
@@ -449,7 +449,7 @@
                                     </div>
                                     <div class="table-responsive">
                                       <div class="tableHead mt-3">Medical History </div>
-                                      <table class="table table-hover custom-table table-bordered">
+                                      <table class="table custom-table table-bordered">
                                         <tbody class="ml-3">
                                           <tr>
                                             <th class="w-50 pt-4">Medical: </th>
@@ -510,7 +510,7 @@
                       </div>
                     </form>
                     <div class="table-responsive mt-2">
-                      <table class="table table-hover table-bordered">
+                      <table class="table table-bordered">
                         <thead class="py-5">
                           <tr class="py-5">
                             <th class="py-3" scope="col">Name</th>
@@ -531,7 +531,7 @@
                 <div class="tab-pane fade" id="v-pills-medications" role="tabpanel" aria-labelledby="v-pills-medications-tab">
                   <div id="medications" class="tabcontent">
                     <div class="table-responsive">
-                      <table class="table table-hover table-bordered">
+                      <table class="table table-bordered">
                         <thead class="py-5">
                           <tr class="py-5">
                             <th class="py-3" scope="col">Vitals</th>

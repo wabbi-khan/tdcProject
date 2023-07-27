@@ -62,9 +62,11 @@
     <div class="bell pencil">
         <i class="bx bx-pencil"></i>
     </div>
-    <div class="bell envelope">
-        <i class="bx bx-envelope"></i>
-    </div>
+    <a href="/TDCPROJECT/dashboard/messages.php">
+        <div class="bell envelope">
+            <i class="bx bx-envelope"></i>
+        </div>
+    </a>
     <div class="logout">
         <div class="btn-group">
             <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"

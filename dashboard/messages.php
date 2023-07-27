@@ -4,9 +4,9 @@
         <?php include('./includes/topHeader.php') ?>
     </div>
     <div class="padd-wrap">
-	<div class="container-fluid h-100">
+	<div class="container-fluid medicalDetails h-100">
 			<div class="row justify-content-center h-100">
-				<div class="col-md-4 col-xl-3 chat">
+				<div class="col-md-4 col-xl-4 chat">
                     <div class="card chatBox mb-sm-3 mb-md-0 contacts_card">
 					<div class="card-header">
 						<div class="input-group">
@@ -105,7 +105,7 @@
 					<div class="card-footer"></div>
 				</div>
             </div>
-				<div class="col-md-8 col-xl-6 chat">
+				<div class="col-md-8 col-xl-8 chat">
 					<div class="card chatBox">
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
@@ -117,12 +117,12 @@
 									<span>Chat with Khalid</span>
 									<p>1767 Messages</p>
 								</div>
-								<div class="video_cam">
-									<span><i class="fas fa-video"></i></span>
-									<span><i class="fas fa-phone"></i></span>
-								</div>
+								
 							</div>
-							<!-- <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span> -->
+							<span id="action_menu_btn"><div class="video_cam">
+									<span><i class="fas fa-video"></i></span>
+									
+								</div></span>
 							<div class="action_menu">
 								<ul>
 									<li><i class="fas fa-user-circle"></i> View profile</li>
