@@ -9,13 +9,13 @@
     <div class="container">
 		<div class="main-body">
 			<div class="row">
-				<div class="col-lg-4">
+				<div class="col-lg-4 mt-2">
 					<div class="card profileCard">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" width="110">
+								<img src="assets/images.png" alt="Admin" width="110">
 								<div class="mt-3">
-									<h4>John Doe</h4>
+									<h4>Anna Marie</h4>
 									<p class="text-secondary mb-1">MBBS Doctor</p>
 									<p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
 									<!-- <button class="btn btn-primary">Follow</button> -->
@@ -45,7 +45,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-8">
+				<div class="col-lg-8 mt-2">
 					<div class="card profileCard">
 						<div class="card-body">
 							<div class="row mb-3">
@@ -53,7 +53,7 @@
 									<h6 class="mb-0">Full Name</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<input type="text" class="form-control" value="John Doe">
+									<input type="text" class="form-control" value="Anna Marie">
 								</div>
 							</div>
 							<div class="row mb-3">
@@ -61,7 +61,7 @@
 									<h6 class="mb-0">Email</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<input type="text" class="form-control" value="john@example.com">
+									<input type="text" class="form-control" value="anna@example.com">
 								</div>
 							</div>
 							<div class="row mb-3">

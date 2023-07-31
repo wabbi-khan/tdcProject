@@ -500,7 +500,7 @@
                     <form class="container">
                       <div class="row">
                         <div class=" multiDrop">
-                          <div class="col-lg-5">
+                          <div class="col-lg-5 mx-2">
                             <input type="text" class="form-control" placeholder="Enter folder name">
                           </div>
                           <div class="col-lg-2">

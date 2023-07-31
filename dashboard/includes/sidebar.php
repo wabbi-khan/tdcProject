@@ -66,7 +66,8 @@
             </li>
             <li class="nav-link--cus">
                 <a href="/TDCPROJECT/dashboard/appInvite.php">
-                    <i class="bx bx-wallet icon"></i>
+                    <!-- <i class="bx bx-wallet icon"></i> -->
+                    <i class='bx bx-mail-send icon'></i>
                     <span class="text nav-text">App Invite</span>
                 </a>
             </li>

@@ -5,7 +5,7 @@
         <?php include('./includes/topHeader.php') ?>
     </div>
     <div class="padd-wrap">
-        <div class="container">
+        <div class="container myPatient">
             <div class="row">
                 <div class="col-md-2 my-3">
                     <select class="form-select" aria-label="Default select example">

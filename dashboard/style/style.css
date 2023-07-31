@@ -21,11 +21,16 @@ a {
   background-color: var(--primary-color);
   color: #fff;
 }
-
+table thead tr th {
+  width: 16%;
+}
 .form-check-input:checked {
   background-color: var(--primary-color);
 }
 /* ===== Sidebar ===== */
+.menu-links--cus .icon {
+  font-size: 22px;
+}
 
 .sidebar--cus {
   position: fixed;
@@ -1358,12 +1363,14 @@ body.dark .home .text {
   border: none;
 }
 
-#soap .search {
+#soap .search,
+.myPatient .search {
   display: inline-block;
   position: relative;
 }
 
-#soap .search input[type="text"] {
+#soap .search input[type="text"],
+.myPatient .search input[type="text"] {
   width: 500px;
   padding: 10px;
   border: none;
@@ -1371,11 +1378,13 @@ body.dark .home .text {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#soap .search input[type="text"]:focus {
+#soap .search input[type="text"]:focus,
+.myPatient .search input[type="text"]:focus {
   outline: none;
 }
 
-#soap .search button[type="submit"] {
+#soap .search button[type="submit"],
+.myPatient .search button[type="submit"] {
   background-color: var(--icon-bg);
   border: none;
   color: var(--primary-color);
@@ -1389,7 +1398,8 @@ body.dark .home .text {
   transition: 0.9s ease;
 }
 
-#soap .search button[type="submit"]:hover {
+#soap .search button[type="submit"]:hover,
+.myPatient .search button[type="submit"]:hover {
   transform: scale(1.1);
   color: white;
   background-color: var(--primary-color);
@@ -1714,8 +1724,66 @@ body.dark .home .text {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.hidden {
+.hidden,
+.mobViewChat {
   display: none;
+}
+
+/* ? Support Page */
+
+.support {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+}
+.topicon {
+  background-color: var(--icon-bg);
+  color: var(--icons-color);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.supportPara {
+  width: 50%;
+  text-align: center;
+}
+.supportBox {
+  display: flex;
+  gap: 20px;
+}
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  padding: 30px 20px;
+  background-color: var(--icon-bg);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.infoBox i {
+  font-size: 30px;
+  color: var(--icons-color);
+}
+.infoBox span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.infoBox:hover {
+  box-shadow: 0 0 15px #7777;
+
+  transform: scale(1.1);
 }
 /* ? ==== Mobile  Responsive ======= */
 @media only screen and (max-width: 600px) {
@@ -1727,7 +1795,11 @@ body.dark .home .text {
   .topHeader .icons {
     display: block;
   }
-  .topHeader .dektopIcons {
+  .mobViewChat {
+    display: block;
+  }
+  .topHeader .dektopIcons,
+  .desktopViewChat {
     display: none;
   }
   .topHeader h2 {
@@ -1756,7 +1828,8 @@ body.dark .home .text {
     filter: blur(0px);
   }
   .sidebar--cus + .home {
-    filter: blur(10px);
+    /* background-color: white; */
+    filter: blur(50px);
   }
 
   thead {
@@ -1815,6 +1888,29 @@ body.dark .home .text {
   .contacts_card {
     margin-bottom: 15px !important;
   }
+  .backButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-right: 20px;
+    margin-top: -20px;
+  }
+  .msg_cotainer,
+  .msg_cotainer_send {
+    font-size: 12px;
+  }
+  .supportBox {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .support {
+    padding: 0;
+    align-items: center;
+  }
+  .supportPara {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 576px) {
   .form-container {
@@ -1871,8 +1967,4 @@ body.dark .home .text {
   .right-box {
     padding: 20px;
   }
-}
-
-table thead tr th {
-  width: 16%;
 }
